@@ -1,0 +1,10 @@
+{
+  "name": "idealogue",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "gulp": "^3.8.10",
+    "jade": "^1.9.1"
+  }
+}
