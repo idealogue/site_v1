@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Post Grotesk';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/assets/fonts/PostGrotesk-Light.eot');
+  src: local('Post Grotesk Light'),
+       local('PostGrotesk-Light'),
+       url('/assets/fonts/PostGrotesk-Light.woff') format('woff'),
+       url('/assets/fonts/PostGrotesk-Light.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Post Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/PostGrotesk-Book.eot');
+  src: local('Post Grotesk Book'),
+       local('PostGrotesk-Book'),
+       url('/assets/fonts/PostGrotesk-Book.woff') format('woff'),
+       url('/assets/fonts/PostGrotesk-Book.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Post Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/PostGrotesk-Medium.eot');
+  src: local('Post Grotesk Medium'),
+       local('PostGrotesk-Medium'),
+       url('/assets/fonts/PostGrotesk-Medium.woff') format('woff'),
+       url('/assets/fonts/PostGrotesk-Medium.svg') format('svg');
+}
+
