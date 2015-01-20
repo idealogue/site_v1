@@ -5,8 +5,10 @@ block content
     .vm-8
       p.huge We design and build digital products, from concept to code completion.
 
-    h1.section-headline Projects
-    hr.vm-3-t
+    .row.section-header
+      .col-xs-12
+        h1.section-headline Projects
+    hr.vm-2-t
     .row.vm-6
       .col-xs-12.col-sm-10
         ul.projects.huge
@@ -21,16 +23,40 @@ block content
 
     .row.section-header
       .col-xs-5
-        h1 Team
+        h1.section-headline Team
       .col-xs-7
-        span.icon.icon-back
-        | Mariusz
-        | Saori
-        span.icon.icon-forward
-        | Close
-        span.icon.icon-close
+        a.prev(href='#')
+          span.icon.icon-back
+          | Mariusz
+        a.next(href='#')
+          | Saori
+          span.icon.icon-forward
+        a.close(href='#')
+          | Close
+          span.icon.icon-close
+    hr.vm-2-t
+    .row.vm-6.section-body
+      .col-xs-5
+        img.photo(alt='Lars' src='/assets/images/lars.jpg' width='155' height='155')
+        .vm-4-t
+          ul.links
+            li: a(href='#') Twitter
+            li: a(href='#') Github
+            li: a(href='#') Linkedin
 
-    hr.vm-3-t
+      .col-xs-7
+        h1.section-headline Lars Kluge
+        p Technical Director
+        hr.vm-1-t.vm-3-b
+        p Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.
+        p German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.
+
+    hr.vm-4-t.vm-3-b
+
+    .row.section-header
+      .col-xs-12
+        h1.section-headline Team
+    hr.vm-2-t
     .row.vm-6
       .col-xs-12.col-sm-10
         ul.team.huge
@@ -39,8 +65,10 @@ block content
           li: a(href='#' target='_blank') Saori Kajiwara
           li: a(href='#' target='_blank') Mariusz Roliński
 
-    h1.section-headline More
-    hr.vm-3-t
+    .row.section-header
+      .col-xs-12
+        h1.section-headline More
+    hr.vm-2-t
     .row.vm-6
       .col-xs-12.col-sm-10
         ul.more.huge

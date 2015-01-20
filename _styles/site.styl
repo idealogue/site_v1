@@ -25,16 +25,58 @@
 .more
   margin: 0
 
-.section-header
-  line-height: 1.33
-
-.section-header .icon
-  font-size: 1.2em
-  position: relative
-  top: 2px
-
-.section-header h1
+.section-headline
+  medium()
   font-size: 1.33em
   line-height: 1
   margin: 0
+
+.section-header
+  line-height: 1.33
+
+
+  .close
+    float: right
+
+  .prev,
+  .next
+    display: block
+    float: left
+    width: 85px
+
+  .next
+    margin-left: 25px
+
+  .icon
+    font-size: 1.2em
+    margin: 0 0.3em 0 0
+    position: relative
+    top: 2px
+
+  .close .icon,
+  .next .icon
+    margin: 0 0 0 0.3em
+
+.section-body
+  line-height: 1.5em
+
+  .section-headline
+    margin-bottom: 0.3em
+
+  .links
+    list-style: none
+    margin: 0
+    padding: 0
+    width: 155px
+
+  .links li
+    border solid $c-text
+    border-width: 1px 0
+    padding: 10px 0 7px
+
+  .links li + li
+    border-top: 0
+
+.photo
+  border-radius: 8px
 
