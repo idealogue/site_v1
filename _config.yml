@@ -3,4 +3,5 @@ exclude:
   - gulpfile*
   - node_modules
   - package.json
+  - fontello.json
 
