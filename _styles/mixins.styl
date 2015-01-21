@@ -7,3 +7,34 @@ book()
 medium()
   font-weight: 500
 
+
+xs-screen()
+  @media (max-width: $screen-xs-max)
+    {block}
+
+sm-screen()
+  @media (min-width: $screen-sm-min)
+    {block}
+
+screen(size)
+  if size == xs
+    {block}
+  else
+    +sm-screen()
+      {block}
+
+
+xs-grid-column(gutter)
+  +xs-screen()
+    .container,
+    $container
+      padding-left:  (gutter / 2)
+      padding-right: (gutter / 2)
+    .row
+      margin-left:  -(gutter / 2)
+      margin-right: -(gutter / 2)
+
+    for i in (1..$grid-columns)
+      .col-xs-{i}
+        @extend $container
+

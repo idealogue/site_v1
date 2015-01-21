@@ -14,8 +14,12 @@ body
   background: $c-bg
   color: $c-text
   font-family: 'Post Grotesk', 'Helvetica Neue', Tahoma
-  font-size: 15px
+  font-size: 16px
   line-height: 1.1em
+
+  +sm-screen()
+    font-size: 15px
+
 
 input,
 button,
@@ -46,6 +50,7 @@ img
 hr
   border 0
   border-top 1px solid
+  margin: 0
 
 p
   margin: 0
@@ -54,8 +59,11 @@ p + p
   margin-top: 1.5em
 
 .huge
-  font-size: 2em
+  font-size: 1.5625em
   line-height: 1.4
+
+  +sm-screen()
+    font-size: 2em
 
 .light
   light()
@@ -65,4 +73,7 @@ p + p
 
 .medium
   medium()
+
+.text-right
+  text-align: right
 

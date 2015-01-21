@@ -1,15 +1,23 @@
 extends layout
 
+mixin social
+  ul.links
+    li: a(href='#') Twitter
+    li.separator
+    li: a(href='#') Github
+    li.separator
+    li: a(href='#') Linkedin
+
 block content
   .container
-    .vm-8
+    .vm-7.vm-8-sm
       p.huge We design and build digital products, from concept to code completion.
 
-    .row.section-header
+    .row.section-header.vm-2-b
       .col-xs-12
         h1.section-headline Projects
-    hr.vm-2-t
-    .row.vm-6
+    hr
+    .row.vp-4
       .col-xs-12.col-sm-10
         ul.projects.huge
           li: a(href='#' target='_blank') Crowdcurity
@@ -21,43 +29,51 @@ block content
           li: a(href='#' target='_blank') Bitpocket
           li: a(href='#' target='_blank') Xbalances
 
-    .row.section-header
+    .row.section-header.vm-2-b
       .col-xs-5
         h1.section-headline Team
       .col-xs-7
-        a.prev(href='#')
+        a.prev.hidden-xs(href='#')
           span.icon.icon-back
-          | Mariusz
-        a.next(href='#')
-          | Saori
+          span.label Mariusz
+        a.next.hidden-xs(href='#')
+          span.label Saori
           span.icon.icon-forward
         a.close(href='#')
-          | Close
+          span.label.hidden-xs Close
           span.icon.icon-close
-    hr.vm-2-t
-    .row.vm-6.section-body
-      .col-xs-5
+    hr
+    .row.section-body.vp-0.vp-4-sm
+      .col-sm-5.hidden-xs
         img.photo(alt='Lars' src='/assets/images/lars.jpg' width='155' height='155')
-        .vm-4-t
-          ul.links
-            li: a(href='#') Twitter
-            li: a(href='#') Github
-            li: a(href='#') Linkedin
+        .vm-4-t: +social
+      .col-xs-12.col-sm-7
+        .team-member.vp-2.vp-0-sm-t
+          img.photo.visible-xs(alt='Lars' src='/assets/images/lars.jpg' width='50' height='50')
+          h1.section-headline Lars Kluge
+          p Technical Director
+        hr
+        .vm-4-t.vm-3-sm-t
+          p Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.
+          p German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.
 
-      .col-xs-7
-        h1.section-headline Lars Kluge
-        p Technical Director
-        hr.vm-1-t.vm-3-b
-        p Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.
-        p German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.
+    .vm-4-t.visible-xs: +social
 
-    hr.vm-4-t.vm-3-b
+    .visible-xs.prev-next-links
+      a.prev(href='#')
+        span.icon.icon-back
+        span.label Mariusz
+      a.next(href='#')
+        span.label Saori
+        span.icon.icon-forward
 
-    .row.section-header
+    .vm-6-b.vm-4-sm-b: hr
+
+    .row.section-header.vm-2-b
       .col-xs-12
         h1.section-headline Team
-    hr.vm-2-t
-    .row.vm-6
+    hr
+    .row.vp-4
       .col-xs-12.col-sm-10
         ul.team.huge
           li: a(href='#' target='_blank') Matt Innes
@@ -65,11 +81,11 @@ block content
           li: a(href='#' target='_blank') Saori Kajiwara
           li: a(href='#' target='_blank') Mariusz Roliński
 
-    .row.section-header
+    .row.section-header.vm-2-b
       .col-xs-12
         h1.section-headline More
-    hr.vm-2-t
-    .row.vm-6
+    hr
+    .row.vp-4
       .col-xs-12.col-sm-10
         ul.more.huge
           li: a(href='#' target='_blank') Contact Us

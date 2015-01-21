@@ -7,19 +7,23 @@
 @import 'footer'
 @import 'vertical_space'
 
+xs-grid-column(80px)
 
 .team,
 .projects,
 .more
   list-style: none
+  margin: 0
   padding: 0
 
 .projects
-  margin: 0 0 0 -0.25em
+  +sm-screen()
+    margin: 0 0 0 -0.25em
 
 .projects li
-  display: inline-block
-  margin-left: 0.25em
+  +sm-screen()
+    display: inline-block
+    margin-left: 0.25em
 
 .team,
 .more
@@ -32,8 +36,7 @@
   margin: 0
 
 .section-header
-  line-height: 1.33
-
+  line-height: 24px
 
   .close
     float: right
@@ -47,26 +50,75 @@
   .next
     margin-left: 25px
 
-  .icon
+.icon
+  font-size: 24px
+
+  +sm-screen()
     font-size: 1.2em
     margin: 0 0.3em 0 0
     position: relative
     top: 2px
 
-  .close .icon,
-  .next .icon
-    margin: 0 0 0 0.3em
+.prev,
+.next,
+.close
+  line-height: 24px
+
+  span
+    vertical-align: top
+
+.prev-next-links
+  clearfix()
+  padding: 30px 0 29px
+
+  .prev
+    float: left
+
+  .next
+    float: right
+
+.close .icon,
+.next .icon
+  margin: 0 0 0 0.4em
+
+.prev .icon
+  margin: 0 0.4em 0 0
+
+.links
+  list-style: none
+  margin: 0
+  padding: 0
+
+  +xs-screen()
+    border: solid $c-text
+    border-width: 1px 0
+    padding: 15px 0
+    text-align: center
+
+.links li
+
+  +xs-screen()
+    display: inline-block
+
+.links .separator
+  background: $c-text
+  border-radius: 50%
+  display: inline-block
+  height: 4px
+  margin: 5px 10px 0
+  vertical-align: top
+  width: 4px
+
+  +sm-screen()
+    display: none
 
 .section-body
   line-height: 1.5em
 
   .section-headline
-    margin-bottom: 0.3em
+    margin-bottom: 0.4em
 
   .links
-    list-style: none
-    margin: 0
-    padding: 0
     width: 155px
 
   .links li
@@ -79,4 +131,24 @@
 
 .photo
   border-radius: 8px
+
+.team-member
+  padding-left: 65px
+  position: relative
+
+  p
+    line-height: 1
+
+  h1
+    margin-top: 2px
+
+  .photo
+    border-radius: 4px
+    left: 0
+    position: absolute
+    top: 20px
+
+  +sm-screen()
+    padding-left: 0
+    position: static
 
