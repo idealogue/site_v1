@@ -11,17 +11,17 @@ mixin social
 
 block content
   .container
-    .vm-7.vm-8-sm
+    .vm-7-t.vm-4-b.vm-8-sm-t.vm-5-sm-b
       p.huge We design &amp; build digital products, from concept to code completion.
 
-    .row.section-header.vm-2-b
+    #projects.row.section-header.vm-2-b.vp-3-t
       .col-xs-5
         h1.section-headline Projects
       .col-xs-7
-        a.prev.hidden-xs(href='#')
+        a.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
           span.icon.icon-back
           span.label Previous
-        a.next.hidden-xs(href='#')
+        a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
           span.label Next
           span.icon.icon-forward
         a.close(href='#')
@@ -29,8 +29,20 @@ block content
           span.icon.icon-close
     hr
 
-    for p in projects
-      +project(p)
+    .vp-0-t.vp-6-b.vp-5-sm-t.vp-4-sm-b
+      .slider(data-slider='projects')
+        for p, idx in projects
+          +project(p, idx === 0)
+
+      .visible-xs.prev-next-links
+        a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
+          span.icon.icon-back
+          span.label Previous
+        a.next(href='#' data-next-for='projects' onclick='return false;' data-scroll)
+          span.label Next
+          span.icon.icon-forward
+
+      .visible-xs: hr
 
     .row.section-header.vm-2-b
       .col-xs-12
@@ -39,15 +51,8 @@ block content
     .row.vp-4.vp-5-sm
       .col-xs-12.col-sm-10
         ul.projects.huge
-          li: a(href='#' target='_blank') Crowdcurity
-          li: a(href='#' target='_blank') Counterparty
-          li: a(href='#' target='_blank') Inkpad
-          li: a(href='#' target='_blank') Huxtaburger
-          li: a(href='#' target='_blank') Hive
-          li: a(href='#' target='_blank') Bitcoins.com
-          li: a(href='#' target='_blank') Bitpocket
-          li: a(href='#' target='_blank') Xbalances
-
+          for p in projects
+            +project-li(p)
 
     .row.section-header.vm-2-b
       .col-xs-5

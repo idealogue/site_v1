@@ -1,6 +1,12 @@
-mixin project(data)
-  .project(data-project=data.name.toLowerCase().replace(/[^a-z]/g, '-'))
-    .row.section-body.vp-0.vp-5-sm-t
+mixin project-li(data)
+  - var slide = data.name.toLowerCase().replace(/[^a-z]/g, '-');
+  li: a(href=data.url target='_blank' data-slider='projects' data-slide-to=slide)= data.name
+
+
+mixin project(data, active)
+  - var slide = data.name.toLowerCase().replace(/[^a-z]/g, '-');
+  .project.slider-item(data-slide=slide class=(active ? 'active' : '') style=(!active ? 'display: none;' : ''))
+    .row.section-body
       .col-sm-5.hidden-xs
         .project-image-wrapper.vp-2-b
           img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
@@ -29,28 +35,18 @@ mixin project(data)
               a.plus(href='#'): span.icon.icon-plus
               a.minus(href='#'): span.icon.icon-minus
           hr.when-opened
-          .vm-2.vp-5-sm-b.when-opened
+          .vm-2.vm-0-sm-b.vp-5-sm-b.when-opened
             ul.credits
               for tasks, name in data.credits
                 li
                   strong.name= name
                   span= tasks
 
-    .vm-0-sm-t.vp-4-sm-b
+    .vm-0-sm-t
       ul.project-links
         li: a(href=data.url target='_blank') Visit the Site
         li.separator
         li: a(href='#')
           .hidden-xs See more on Behance
           .visible-xs-inline More on Behance
-
-    .visible-xs.prev-next-links
-      a.prev(href='#')
-        span.icon.icon-back
-        span.label Previous
-      a.next(href='#')
-        span.label Next
-        span.icon.icon-forward
-
-    .vp-6-b.visible-xs: hr
 
