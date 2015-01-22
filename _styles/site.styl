@@ -36,7 +36,7 @@ xs-grid-column(80px)
   margin: 0
 
 .section-header
-  line-height: 24px
+  line-height: 20px
 
   .close
     float: right
@@ -51,18 +51,16 @@ xs-grid-column(80px)
     margin-left: 25px
 
 .icon
-  font-size: 24px
+  font-size: 20px
 
   +sm-screen()
     font-size: 1.2em
     margin: 0 0.3em 0 0
-    position: relative
-    top: 2px
 
 .prev,
 .next,
 .close
-  line-height: 24px
+  line-height: 20px
 
   span
     vertical-align: top
@@ -92,7 +90,7 @@ xs-grid-column(80px)
   +xs-screen()
     border: solid $c-text
     border-width: 1px 0
-    padding: 15px 0
+    padding: 25px 0
     text-align: center
 
 .links li
@@ -168,26 +166,16 @@ xs-grid-column(80px)
   list-style: none
   margin: 0
   padding: 25px 0
+  text-align: center
+
+  +sm-screen()
+    text-align: left
 
 .project-links li
 
+  &,
   &.separator
-    display: none
-
-  +sm-screen()
-
-    &,
-    &.separator
-      display: inline-block
-
-.project-links li + li
-  margin-top: 10px
-
-  +sm-screen()
-    margin-top: 0
-
-.project-links .separator
-  margin-top: 6px
+    display: inline-block
 
 .project-image
   display: block

@@ -12,7 +12,9 @@ mixin more
   ul.project-links
     li: a(href='#') Visit the Site
     li.separator
-    li: a(href='#') See more on Behance
+    li: a(href='#')
+      .hidden-xs See more on Behance
+      .visible-xs-inline More on Behance
 
 
 block content
@@ -22,8 +24,7 @@ block content
 
     .row.section-header.vm-2-b
       .col-xs-5
-        h1.section-headline.hidden-xs Projects
-        h1.section-headline.visible-xs Crowdcurity
+        h1.section-headline Projects
       .col-xs-7
         a.prev.hidden-xs(href='#')
           span.icon.icon-back

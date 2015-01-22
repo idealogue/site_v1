@@ -1509,7 +1509,7 @@ strong {
   margin: 0;
 }
 .section-header {
-  line-height: 24px;
+  line-height: 20px;
 }
 .section-header .close {
   float: right;
@@ -1524,20 +1524,18 @@ strong {
   margin-left: 25px;
 }
 .icon {
-  font-size: 24px;
+  font-size: 20px;
 }
 @media (min-width: 550px) {
   .icon {
     font-size: 1.2em;
     margin: 0 0.3em 0 0;
-    position: relative;
-    top: 2px;
   }
 }
 .prev,
 .next,
 .close {
-  line-height: 24px;
+  line-height: 20px;
 }
 .prev span,
 .next span,
@@ -1577,7 +1575,7 @@ strong {
   .links {
     border: solid #184d6a;
     border-width: 1px 0;
-    padding: 15px 0;
+    padding: 25px 0;
     text-align: center;
   }
 }
@@ -1658,26 +1656,16 @@ strong {
   list-style: none;
   margin: 0;
   padding: 25px 0;
+  text-align: center;
 }
+@media (min-width: 550px) {
+  .project-links {
+    text-align: left;
+  }
+}
+.project-links li,
 .project-links li.separator {
-  display: none;
-}
-@media (min-width: 550px) {
-  .project-links li,
-  .project-links li.separator {
-    display: inline-block;
-  }
-}
-.project-links li + li {
-  margin-top: 10px;
-}
-@media (min-width: 550px) {
-  .project-links li + li {
-    margin-top: 0;
-  }
-}
-.project-links .separator {
-  margin-top: 6px;
+  display: inline-block;
 }
 .project-image {
   display: block;
