@@ -5,6 +5,12 @@ bootstrap = require 'bootstrap-styl'
 jade = require 'gulp-jade'
 stream = require 'combined-stream'
 concat = require 'gulp-concat'
+coffee = require 'gulp-coffee'
+
+paths =
+  js: [
+    'node_modules/jquery/dist/jquery.min.js'
+  ]
 
 gulp.task 'clean:js', (cb) ->
   del 'assets/site.js', cb
@@ -16,6 +22,12 @@ gulp.task 'clean:views', (cb) ->
   del '*.html', cb
 
 gulp.task 'js', ['clean:js'], ->
+  s = stream.create()
+  s.append gulp.src ['_scripts/*.js'].concat(paths.js)
+  s.append gulp.src('_scripts/site.coffee').pipe(coffee().on('error', console.log))
+  s
+    .pipe concat('site.js')
+    .pipe gulp.dest('assets')
 
 gulp.task 'css', ['clean:css'], ->
   s = stream.create()
@@ -31,7 +43,7 @@ gulp.task 'views', ['clean:views'], ->
     .pipe gulp.dest('.')
 
 gulp.task 'watch', ['default'], ->
-  gulp.watch '_scripts/**/*', ['js']
+  gulp.watch ['_scripts/**/*'].concat(paths.js), ['js']
   gulp.watch '_styles/**/*', ['css']
   gulp.watch '_views/**/*', ['views']
 

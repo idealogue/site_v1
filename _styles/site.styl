@@ -35,11 +35,13 @@ xs-grid-column(80px)
   line-height: 1
   margin: 0
 
+.plus,
+.minus,
+.close
+  float: right
+
 .section-header
   line-height: 20px
-
-  .close
-    float: right
 
   .prev,
   .next
@@ -57,6 +59,8 @@ xs-grid-column(80px)
     font-size: 1.2em
     margin: 0 0.3em 0 0
 
+.minus,
+.plus,
 .prev,
 .next,
 .close
@@ -75,6 +79,8 @@ xs-grid-column(80px)
   .next
     float: right
 
+.plus .minus,
+.plus .icon,
 .close .icon,
 .next .icon
   margin: 0 0 0 0.4em
@@ -150,7 +156,27 @@ xs-grid-column(80px)
 .section-subheadline
   medium()
   font-size: inherit
+  line-height: 20px
   margin: 0
+
+.openable .section-headline
+
+  +xs-screen()
+    font-size: inherit
+    line-height: 20px
+    margin: 0
+
+.open .plus,
+.when-opened,
+.openable .minus
+  display: none
+
+  +sm-screen()
+    display: block
+
+.open .when-opened,
+.open .minus
+  display: block
 
 .credits
   list-style: none

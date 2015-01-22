@@ -79,6 +79,8 @@
 .icon-forward:before { content: '\e800'; } /* '' */
 .icon-close:before { content: '\e801'; } /* '' */
 .icon-back:before { content: '\e802'; } /* '' */
+.icon-plus:before { content: '\e803'; } /* '' */
+.icon-minus:before { content: '\e804'; } /* '' */
 
 
 .clearfix:before,
@@ -1508,11 +1510,13 @@ strong {
   line-height: 1;
   margin: 0;
 }
+.plus,
+.minus,
+.close {
+  float: right;
+}
 .section-header {
   line-height: 20px;
-}
-.section-header .close {
-  float: right;
 }
 .section-header .prev,
 .section-header .next {
@@ -1532,11 +1536,15 @@ strong {
     margin: 0 0.3em 0 0;
   }
 }
+.minus,
+.plus,
 .prev,
 .next,
 .close {
   line-height: 20px;
 }
+.minus span,
+.plus span,
 .prev span,
 .next span,
 .close span {
@@ -1559,6 +1567,8 @@ strong {
 .prev-next-links .next {
   float: right;
 }
+.plus .minus,
+.plus .icon,
 .close .icon,
 .next .icon {
   margin: 0 0 0 0.4em;
@@ -1640,7 +1650,31 @@ strong {
 .section-subheadline {
   font-weight: 500;
   font-size: inherit;
+  line-height: 20px;
   margin: 0;
+}
+@media (max-width: 549px) {
+  .openable .section-headline {
+    font-size: inherit;
+    line-height: 20px;
+    margin: 0;
+  }
+}
+.open .plus,
+.when-opened,
+.openable .minus {
+  display: none;
+}
+@media (min-width: 550px) {
+  .open .plus,
+  .when-opened,
+  .openable .minus {
+    display: block;
+  }
+}
+.open .when-opened,
+.open .minus {
+  display: block;
 }
 .credits {
   list-style: none;
