@@ -1,0 +1,55 @@
+mixin project(data)
+  .row.section-body.vp-0.vp-5-sm-t
+    .col-sm-5.hidden-xs
+      .project-image-wrapper.vp-2-b
+        img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
+
+    .col-xs-12.col-sm-7
+      .vm-6-t.vm-2-b.visible-xs: img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
+
+      .openable
+        hr.visible-xs
+        .row.vp-2.vp-0-sm-t.vp-1-sm-b
+          .col-xs-9.col-sm-12
+            h1.section-headline= data.name
+          .col-xs-3.visible-xs.togglers
+            a.plus(href='#'): span.icon.icon-plus
+            a.minus(href='#'): span.icon.icon-minus
+        hr.when-opened
+        .vm-2.when-opened
+          != marked(data.description)
+
+      .openable
+        hr.visible-xs
+        .row.vp-2.vp-0-sm-t.vp-1-sm-b
+          .col-xs-9.col-sm-12
+            h1.section-subheadline Credits
+          .col-xs-3.visible-xs.togglers
+            a.plus(href='#'): span.icon.icon-plus
+            a.minus(href='#'): span.icon.icon-minus
+        hr.when-opened
+        .vm-2.vp-5-sm-b.when-opened
+          ul.credits
+            for tasks, name in data.credits
+              li
+                strong.name= name
+                span= tasks
+
+  .vm-0-sm-t.vm-4-sm-b
+    ul.project-links
+      li: a(href=data.url target='_blank') Visit the Site
+      li.separator
+      li: a(href='#')
+        .hidden-xs See more on Behance
+        .visible-xs-inline More on Behance
+
+  .visible-xs.prev-next-links
+    a.prev(href='#')
+      span.icon.icon-back
+      span.label Previous
+    a.next(href='#')
+      span.label Next
+      span.icon.icon-forward
+
+  .vm-6-b.visible-xs: hr
+

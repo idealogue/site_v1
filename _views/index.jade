@@ -1,4 +1,5 @@
 extends layout
+include project
 
 mixin social
   ul.links
@@ -7,15 +8,6 @@ mixin social
     li: a(href='#') Github
     li.separator
     li: a(href='#') Linkedin
-
-mixin more
-  ul.project-links
-    li: a(href='#') Visit the Site
-    li.separator
-    li: a(href='#')
-      .hidden-xs See more on Behance
-      .visible-xs-inline More on Behance
-
 
 block content
   .container
@@ -36,64 +28,9 @@ block content
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
-    .row.section-body.vp-0.vp-5-sm-t
-      .col-sm-5.hidden-xs
-        .project-image-wrapper.vp-2-b
-          img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
 
-      .col-xs-12.col-sm-7
-        .vm-6-t.vm-2-b.visible-xs: img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
-
-        .openable
-          hr.visible-xs
-          .row.vp-2.vp-0-sm-t.vp-1-sm-b
-            .col-xs-9.col-sm-12
-              h1.section-headline Crowdcurity
-            .col-xs-3.visible-xs.togglers
-              a.plus(href='#'): span.icon.icon-plus
-              a.minus(href='#'): span.icon.icon-minus
-          hr.when-opened
-          .vm-2.when-opened
-            p Brand refresh and site for Crowdcurity, the crowd sourced site security specialists. Entrainait pressaient he paraissent sa commandant qu du.
-
-        .openable
-          hr.visible-xs
-          .row.vp-2.vp-0-sm-t.vp-1-sm-b
-            .col-xs-9.col-sm-12
-              h1.section-subheadline Credits
-            .col-xs-3.visible-xs.togglers
-              a.plus(href='#'): span.icon.icon-plus
-              a.minus(href='#'): span.icon.icon-minus
-          hr.when-opened
-          .vm-2.vp-5-sm-b.when-opened
-            ul.credits
-              li
-                strong.name Matt Innes
-                span Brand, Creative direction
-              li
-                strong.name Lars Kluge
-                span CMS, Technical direction
-              li
-                strong.name Saori Kajiwara
-                span Design, illustration
-              li
-                strong.name Mariusz Roliński
-                span Front end code
-              li
-                strong.name Marty Cook
-                span Illustration
-
-    .vm-0-sm-t.vm-4-sm-b: +more
-
-    .visible-xs.prev-next-links
-      a.prev(href='#')
-        span.icon.icon-back
-        span.label Previous
-      a.next(href='#')
-        span.label Next
-        span.icon.icon-forward
-
-    .vm-6-b.visible-xs: hr
+    for p in projects
+      +project(p)
 
     .row.section-header.vm-2-b
       .col-xs-12
@@ -110,6 +47,7 @@ block content
           li: a(href='#' target='_blank') Bitcoins.com
           li: a(href='#' target='_blank') Bitpocket
           li: a(href='#' target='_blank') Xbalances
+
 
     .row.section-header.vm-2-b
       .col-xs-5

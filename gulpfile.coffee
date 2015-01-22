@@ -6,6 +6,8 @@ jade = require 'gulp-jade'
 stream = require 'combined-stream'
 concat = require 'gulp-concat'
 coffee = require 'gulp-coffee'
+marked = require 'marked'
+_ = require 'lodash'
 
 paths =
   js: [
@@ -38,8 +40,11 @@ gulp.task 'css', ['clean:css'], ->
     .pipe gulp.dest('assets')
 
 gulp.task 'views', ['clean:views'], ->
+  delete require.cache[__dirname + "/_views/data.coffee"];
+  data = _.assign {}, require('./_views/data'),
+    marked: marked
   gulp.src('_views/index.jade')
-    .pipe jade(pretty: true).on('error', console.log)
+    .pipe jade(pretty: true, data: data).on('error', console.log)
     .pipe gulp.dest('.')
 
 gulp.task 'watch', ['default'], ->
