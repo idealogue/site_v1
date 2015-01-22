@@ -93,3 +93,78 @@ module.exports =
   ]
 
 
+  team:
+    # Matt
+    #
+    'Matt Innes':
+      links: [
+        name: 'Twitter'
+        url: 'https://twitter.com/'
+      ,
+        name: 'Github'
+        url: 'https://github.com/'
+      ,
+        name: 'Linked In'
+        url: 'https://www.linkedin.com/'
+      ]
+      bio: """
+        Etiam ultricies placerat pulvinar. In eu eleifend ligula. Ut in turpis diam. Etiam diam diam, faucibus nec augue sit amet, maximus lacinia purus. Integer imperdiet dolor et odio vulputate, eu faucibus metus auctor.
+
+        Phasellus consectetur, ligula vitae tincidunt congue, enim orci varius augue, sed tempor nisl neque quis tellus.
+      """
+
+    # Lars
+    #
+    'Lars Kluge':
+      links: [
+        name: 'Twitter'
+        url: 'https://twitter.com/aekym'
+      ,
+        name: 'Github'
+        url: 'https://github.com/larskluge'
+      ,
+        name: 'Linked In'
+        url: 'https://www.linkedin.com/in/larskluge'
+      ]
+      bio: """
+        Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.
+
+        German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.
+      """
+
+    # Saori
+    #
+    'Saori Kajiwara':
+      links: [
+        name: 'Twitter'
+        url: 'https://twitter.com/'
+      ,
+        name: 'Github'
+        url: 'https://github.com/'
+      ,
+        name: 'Linked In'
+        url: 'https://www.linkedin.com/'
+      ]
+      bio: """
+        Etiam ultricies placerat pulvinar. In eu eleifend ligula. Ut in turpis diam. Etiam diam diam, faucibus nec augue sit amet, maximus lacinia purus. Integer imperdiet dolor et odio vulputate, eu faucibus metus auctor.
+
+        Phasellus consectetur, ligula vitae tincidunt congue, enim orci varius augue, sed tempor nisl neque quis tellus.
+      """
+
+    # Me
+    #
+    'Mariusz Roliński':
+      links: [
+        name: 'Twitter'
+        url: 'https://twitter.com/'
+      ,
+        name: 'Github'
+        url: 'https://github.com/'
+      ,
+        name: 'Linked In'
+        url: 'https://www.linkedin.com/'
+      ]
+      bio: """
+        Mariusz jest po prostu świetny. #self-quote
+      """
+
