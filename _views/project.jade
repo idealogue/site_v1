@@ -12,7 +12,8 @@ mixin project(data, active)
           img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
 
       .col-xs-12.col-sm-7
-        .vm-6-t.vm-2-b.visible-xs: img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
+        .vm-6-t.vm-2-b.visible-xs
+          img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
 
         .openable
           hr.visible-xs
@@ -30,7 +31,7 @@ mixin project(data, active)
           hr.visible-xs
           .row.vp-2.vp-0-sm-t.vp-1-sm-b
             .col-xs-9.col-sm-12
-              h1.section-subheadline Credits
+              h1.section-headline Credits
             .col-xs-3.visible-xs.togglers
               a.plus(href='#'): span.icon.icon-plus
               a.minus(href='#'): span.icon.icon-minus
