@@ -104,7 +104,6 @@ class @Slider
         scroll
       else
         "##{@name}"
-      console.log scroll, scrollTo
       $('html, body')
         .stop()
         .animate { scrollTop: $(scrollTo).position().top }, 150, =>

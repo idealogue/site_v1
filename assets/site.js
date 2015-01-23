@@ -138,7 +138,6 @@
       })(this);
       if (typeof scroll === 'string') {
         scrollTo = scroll !== '' ? scroll : "#" + this.name;
-        console.log(scroll, scrollTo);
         return $('html, body').stop().animate({
           scrollTop: $(scrollTo).position().top
         }, 150, (function(_this) {
