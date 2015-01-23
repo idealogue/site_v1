@@ -1,153 +1,87 @@
 extends layout
-
-mixin social
-  ul.links
-    li: a(href='#') Twitter
-    li.separator
-    li: a(href='#') Github
-    li.separator
-    li: a(href='#') Linkedin
-
-mixin more
-  ul.project-links
-    li: a(href='#') Visit the Site
-    li.separator
-    li: a(href='#') See more on Behance
-
+include project
+include person
 
 block content
   .container
-    .vm-7.vm-8-sm
-      p.huge We design and build digital products, from concept to code completion.
+    .vm-7-t.vm-4-b.vm-8-sm-t.vm-5-sm-b
+      p.huge We design &amp; build digital products, from concept to code completion.
 
-    .row.section-header.vm-2-b
+    #projects.row.section-header.vm-2-b.vp-3-t.slide--index
       .col-xs-5
-        h1.section-headline.hidden-xs Projects
-        h1.section-headline.visible-xs Crowdcurity
-      .col-xs-7
-        a.prev.hidden-xs(href='#')
+        h1.section-headline Projects
+      .col-xs-7.slider-nav
+        a.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
           span.icon.icon-back
           span.label Previous
-        a.next.hidden-xs(href='#')
+        a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
           span.label Next
           span.icon.icon-forward
-        a.close(href='#')
+        a.close(href='#' data-slide-to='index-projects:index' onclick='return false;')
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
-    .row.section-body.vp-0.vp-5-sm-t
-      .col-sm-5.hidden-xs
-        .project-image-wrapper.vp-2-b
-          img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
 
-      .col-xs-12.col-sm-7
-        .vp-2.vp-0-sm-t.vp-1-sm-b.hidden-xs
-          h1.section-headline Crowdcurity
-        hr.hidden-xs
-        .vm-6-t.visible-xs: img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
-        .vm-2-t
-          p Brand refresh and site for Crowdcurity, the crowd sourced site security specialists. Entrainait pressaient he paraissent sa commandant qu du.
+    .slider(data-slider='index-projects')
+      .slider-item.active(data-slide='index')
+        .row.vp-4-t.vp-1-b.vp-5-sm-t.vp-2-sm-b
+          .col-xs-12.col-sm-10
+            ul.projects.huge
+              for p in projects
+                +project-li(p)
 
-        .vp-3-t.vp-1-b
-          h2.section-subheadline Credits
-        hr
-        .vm-2-t.vp-5-sm-b
-          ul.credits
-            li
-              strong.name Matt Innes
-              span Brand, Creative direction
-            li
-              strong.name Lars Kluge
-              span CMS, Technical direction
-            li
-              strong.name Saori Kajiwara
-              span Design, illustration
-            li
-              strong.name Mariusz Roliński
-              span Front end code
-            li
-              strong.name Marty Cook
-              span Illustration
+      .slider-item(data-slide='slides')
+        .vp-0-t.vp-6-b.vp-5-sm-t.vp-4-sm-b
+          .slider(data-slider='projects')
+            for p, idx in projects
+              +project(p, idx === 0)
+          .visible-xs.prev-next-links
+            a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
+              span.icon.icon-back
+              span.label Previous
+            a.next(href='#' data-next-for='projects' onclick='return false;' data-scroll)
+              span.label Next
+              span.icon.icon-forward
+          .visible-xs: hr
 
-    .vm-2-t.vm-0-sm-t.vm-4-sm-b: +more
 
-    .visible-xs.prev-next-links
-      a.prev(href='#')
-        span.icon.icon-back
-        span.label Previous
-      a.next(href='#')
-        span.label Next
-        span.icon.icon-forward
-
-    .vm-6-b.visible-xs: hr
-
-    .row.section-header.vm-2-b
-      .col-xs-12
-        h1.section-headline Projects
-    hr
-    .row.vp-4.vp-5-sm
-      .col-xs-12.col-sm-10
-        ul.projects.huge
-          li: a(href='#' target='_blank') Crowdcurity
-          li: a(href='#' target='_blank') Counterparty
-          li: a(href='#' target='_blank') Inkpad
-          li: a(href='#' target='_blank') Huxtaburger
-          li: a(href='#' target='_blank') Hive
-          li: a(href='#' target='_blank') Bitcoins.com
-          li: a(href='#' target='_blank') Bitpocket
-          li: a(href='#' target='_blank') Xbalances
-
-    .row.section-header.vm-2-b
+    #team.row.section-header.vm-2-b.vp-3-t.slide--index
       .col-xs-5
         h1.section-headline Team
-      .col-xs-7
-        a.prev.hidden-xs(href='#')
+      .col-xs-7.slider-nav
+        a.prev.hidden-xs(href='#' data-prev-for='team' onclick='return false;')
           span.icon.icon-back
           span.label Mariusz
-        a.next.hidden-xs(href='#')
+        a.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
           span.label Saori
           span.icon.icon-forward
-        a.close(href='#')
+        a.close(href='#' data-slide-to='index-team:index' onclick='return false;')
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
-    .row.section-body.vp-0.vp-5-sm
-      .col-sm-5.hidden-xs
-        img.photo(alt='Lars' src='/assets/images/lars.jpg' width='155' height='155')
-        .vm-4-t: +social
-      .col-xs-12.col-sm-7
-        .team-member.vp-2.vp-0-sm-t
-          img.photo.visible-xs(alt='Lars' src='/assets/images/lars.jpg' width='50' height='50')
-          h1.section-headline Lars Kluge
-          p Technical Director
-        hr
-        .vm-4-t.vm-3-sm-t
-          p Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.
-          p German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.
 
-    .vm-4-t.visible-xs: +social
+    .slider(data-slider='index-team')
+      .slider-item.active(data-slide='index')
+        .row.vp-4.vp-5-sm
+          .col-xs-12.col-sm-10
+            ul.team.huge
+              for data, name in team
+                +person-li(name, data)
 
-    .visible-xs.prev-next-links
-      a.prev(href='#')
-        span.icon.icon-back
-        span.label Mariusz
-      a.next(href='#')
-        span.label Saori
-        span.icon.icon-forward
-
-    .vm-6-b.vm-4-sm-b: hr
-
-    .row.section-header.vm-2-b
-      .col-xs-12
-        h1.section-headline Team
-    hr
-    .row.vp-4.vp-5-sm
-      .col-xs-12.col-sm-10
-        ul.team.huge
-          li: a(href='#' target='_blank') Matt Innes
-          li: a(href='#' target='_blank') Lars Kluge
-          li: a(href='#' target='_blank') Saori Kajiwara
-          li: a(href='#' target='_blank') Mariusz Roliński
+      .slider-item(data-slide='slides' style='display: none;')
+        .vp-0.vp-5-sm
+          .slider(data-slider='team')
+            - var names = _.keys(team);
+            for person, name in team
+              +person(name, person, names.indexOf(name) === 0)
+        .visible-xs.prev-next-links
+          a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
+            span.icon.icon-back
+            span.label Mariusz
+          a.next(href='#' data-next-for='team' onclick='return false;' data-scroll)
+            span.label Saori
+            span.icon.icon-forward
+        .vm-6-b.vm-4-sm-b: hr
 
     .row.section-header.vm-2-b
       .col-xs-12
@@ -156,7 +90,6 @@ block content
     .row.vp-4.vp-5-sm
       .col-xs-12.col-sm-10
         ul.more.huge
-          li: a(href='#' target='_blank') Contact Us
-          li: a(href='#' target='_blank') Twitter
-          li: a(href='#' target='_blank') Blog
+          li: a(href='mailto:io@idealogue.io') Contact Us
+          li: a(href='https://twitter.com/idealogue' target='_blank') Twitter
 

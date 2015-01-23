@@ -45,4 +45,6 @@
 .icon-forward:before { content: '\e800'; } /* '' */
 .icon-close:before { content: '\e801'; } /* '' */
 .icon-back:before { content: '\e802'; } /* '' */
+.icon-plus:before { content: '\e803'; } /* '' */
+.icon-minus:before { content: '\e804'; } /* '' */
 

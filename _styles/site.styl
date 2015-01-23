@@ -6,6 +6,7 @@
 @import 'scaffolding'
 @import 'footer'
 @import 'vertical_space'
+@import 'sliders'
 
 xs-grid-column(80px)
 
@@ -35,11 +36,13 @@ xs-grid-column(80px)
   line-height: 1
   margin: 0
 
-.section-header
-  line-height: 24px
+.plus,
+.minus,
+.close
+  float: right
 
-  .close
-    float: right
+.section-header
+  line-height: 20px
 
   .prev,
   .next
@@ -51,18 +54,18 @@ xs-grid-column(80px)
     margin-left: 25px
 
 .icon
-  font-size: 24px
+  font-size: 20px
 
   +sm-screen()
     font-size: 1.2em
     margin: 0 0.3em 0 0
-    position: relative
-    top: 2px
 
+.minus,
+.plus,
 .prev,
 .next,
 .close
-  line-height: 24px
+  line-height: 20px
 
   span
     vertical-align: top
@@ -77,6 +80,11 @@ xs-grid-column(80px)
   .next
     float: right
 
+.slide--index .slider-nav
+  visibility: hidden
+
+.plus .minus,
+.plus .icon,
 .close .icon,
 .next .icon
   margin: 0 0 0 0.4em
@@ -92,7 +100,7 @@ xs-grid-column(80px)
   +xs-screen()
     border: solid $c-text
     border-width: 1px 0
-    padding: 15px 0
+    padding: 25px 0
     text-align: center
 
 .links li
@@ -152,7 +160,27 @@ xs-grid-column(80px)
 .section-subheadline
   medium()
   font-size: inherit
+  line-height: 20px
   margin: 0
+
+.openable .section-headline
+
+  +xs-screen()
+    font-size: inherit
+    line-height: 20px
+    margin: 0
+
+.open .plus,
+.when-opened,
+.openable .minus
+  display: none
+
+  +sm-screen()
+    display: block
+
+.open .when-opened,
+.open .minus
+  display: block
 
 .credits
   list-style: none
@@ -168,26 +196,16 @@ xs-grid-column(80px)
   list-style: none
   margin: 0
   padding: 25px 0
+  text-align: center
+
+  +sm-screen()
+    text-align: left
 
 .project-links li
 
+  &,
   &.separator
-    display: none
-
-  +sm-screen()
-
-    &,
-    &.separator
-      display: inline-block
-
-.project-links li + li
-  margin-top: 10px
-
-  +sm-screen()
-    margin-top: 0
-
-.project-links .separator
-  margin-top: 6px
+    display: inline-block
 
 .project-image
   display: block
