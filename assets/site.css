@@ -1578,6 +1578,9 @@ strong {
 .prev-next-links .next {
   float: right;
 }
+.slide--index .slider-nav {
+  visibility: hidden;
+}
 .plus .minus,
 .plus .icon,
 .close .icon,

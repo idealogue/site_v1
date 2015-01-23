@@ -7,86 +7,81 @@ block content
     .vm-7-t.vm-4-b.vm-8-sm-t.vm-5-sm-b
       p.huge We design &amp; build digital products, from concept to code completion.
 
-    #projects.row.section-header.vm-2-b.vp-3-t
+    #projects.row.section-header.vm-2-b.vp-3-t.slide--index
       .col-xs-5
         h1.section-headline Projects
-      .col-xs-7
+      .col-xs-7.slider-nav
         a.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
           span.icon.icon-back
           span.label Previous
         a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
           span.label Next
           span.icon.icon-forward
-        a.close(href='#')
+        a.close(href='#' data-slide-to='index-projects:index' onclick='return false;')
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
 
-    .vp-0-t.vp-6-b.vp-5-sm-t.vp-4-sm-b
-      .slider(data-slider='projects')
-        for p, idx in projects
-          +project(p, idx === 0)
+    .slider(data-slider='index-projects')
+      .slider-item.active(data-slide='index')
+        .row.vp-4-t.vp-1-b.vp-5-sm-t.vp-2-sm-b
+          .col-xs-12.col-sm-10
+            ul.projects.huge
+              for p in projects
+                +project-li(p)
 
-      .visible-xs.prev-next-links
-        a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
-          span.icon.icon-back
-          span.label Previous
-        a.next(href='#' data-next-for='projects' onclick='return false;' data-scroll)
-          span.label Next
-          span.icon.icon-forward
+      .slider-item(data-slide='slides')
+        .vp-0-t.vp-6-b.vp-5-sm-t.vp-4-sm-b
+          .slider(data-slider='projects')
+            for p, idx in projects
+              +project(p, idx === 0)
+          .visible-xs.prev-next-links
+            a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
+              span.icon.icon-back
+              span.label Previous
+            a.next(href='#' data-next-for='projects' onclick='return false;' data-scroll)
+              span.label Next
+              span.icon.icon-forward
+          .visible-xs: hr
 
-      .visible-xs: hr
 
-    .row.section-header.vm-2-b
-      .col-xs-12
-        h1.section-headline Projects
-    hr
-    .row.vp-4-t.vp-1-b.vp-5-sm-t.vp-2-sm-b
-      .col-xs-12.col-sm-10
-        ul.projects.huge
-          for p in projects
-            +project-li(p)
-
-    #team.row.section-header.vm-2-b.vp-3-t
+    #team.row.section-header.vm-2-b.vp-3-t.slide--index
       .col-xs-5
         h1.section-headline Team
-      .col-xs-7
+      .col-xs-7.slider-nav
         a.prev.hidden-xs(href='#' data-prev-for='team' onclick='return false;')
           span.icon.icon-back
           span.label Mariusz
         a.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
           span.label Saori
           span.icon.icon-forward
-        a.close(href='#')
+        a.close(href='#' data-slide-to='index-team:index' onclick='return false;')
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
 
-    .vp-0.vp-5-sm
-      .slider(data-slider='team')
-        - var names = _.keys(team);
-        for person, name in team
-          +person(name, person, names.indexOf(name) === 0)
+    .slider(data-slider='index-team')
+      .slider-item.active(data-slide='index')
+        .row.vp-4.vp-5-sm
+          .col-xs-12.col-sm-10
+            ul.team.huge
+              for data, name in team
+                +person-li(name, data)
 
-    .visible-xs.prev-next-links
-      a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
-        span.icon.icon-back
-        span.label Mariusz
-      a.next(href='#' data-next-for='team' onclick='return false;' data-scroll)
-        span.label Saori
-        span.icon.icon-forward
-
-    .vm-6-b.vm-4-sm-b: hr
-
-    .row.section-header.vm-2-b
-      .col-xs-12
-        h1.section-headline Team
-    hr
-    .row.vp-4.vp-5-sm
-      .col-xs-12.col-sm-10
-        ul.team.huge
-          for data, name in team
-            +person-li(name, data)
+      .slider-item(data-slide='slides' style='display: none;')
+        .vp-0.vp-5-sm
+          .slider(data-slider='team')
+            - var names = _.keys(team);
+            for person, name in team
+              +person(name, person, names.indexOf(name) === 0)
+        .visible-xs.prev-next-links
+          a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
+            span.icon.icon-back
+            span.label Mariusz
+          a.next(href='#' data-next-for='team' onclick='return false;' data-scroll)
+            span.label Saori
+            span.icon.icon-forward
+        .vm-6-b.vm-4-sm-b: hr
 
     .row.section-header.vm-2-b
       .col-xs-12

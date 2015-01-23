@@ -6,7 +6,7 @@ mixin social(links)
       li: a(href=link.url target='_blank')= link.name
 
 mixin person-li(name, data)
-  li: a(href=data.links[0].url target='_blank' data-slider='team' data-slide-to=data.id)= name
+  li: a(href=data.links[0].url target='_blank' data-slide-to="index-team:slides team:#{data.id}" data-scroll='#team')= name
 
 mixin person(name, data, active)
   - var label = name.split(' ')[0];
