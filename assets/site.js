@@ -29,7 +29,17 @@
           return _this.goto(_this.next(), $(e.currentTarget).is('[data-scroll]')) && false;
         };
       })(this));
+      this.updateLabels();
     }
+
+    Slider.prototype.updateLabels = function() {
+      if (this.prevLabel()) {
+        $("[data-prev-for='" + this.name + "'] .label").text(this.prevLabel());
+      }
+      if (this.nextLabel()) {
+        return $("[data-next-for='" + this.name + "'] .label").text(this.nextLabel());
+      }
+    };
 
     Slider.prototype.current = function() {
       return this.$el.find('> .active').data('slide');
@@ -49,6 +59,14 @@
       return this.slides[(l + i % l - 1) % l];
     };
 
+    Slider.prototype.prevLabel = function() {
+      return this.$el.find("[data-slide='" + (this.prev()) + "']").data('label') || null;
+    };
+
+    Slider.prototype.nextLabel = function() {
+      return this.$el.find("[data-slide='" + (this.next()) + "']").data('label') || null;
+    };
+
     Slider.prototype.goto = function(slideName, scroll) {
       var $current, $slide, afterScroll, currentHeight;
       if (scroll == null) {
@@ -58,7 +76,6 @@
         return;
       }
       this._animating = true;
-      console.log(slideName);
       $slide = this.$el.find("[data-slide='" + slideName + "']");
       $current = this.$el.find('.active[data-slide]');
       if ($slide.data('slide') === $current.data('slide')) {
@@ -79,6 +96,7 @@
             height: height
           }, 200, function() {
             _this.$el.removeAttr('style');
+            _this.updateLabels();
             return $slide.stop().animate({
               opacity: 1
             }, 200, function() {

@@ -97,6 +97,8 @@ module.exports =
     # Matt
     #
     'Matt Innes':
+      id: 'matt'
+      position: 'Designer'
       links: [
         name: 'Twitter'
         url: 'https://twitter.com/'
@@ -116,6 +118,8 @@ module.exports =
     # Lars
     #
     'Lars Kluge':
+      id: 'lars'
+      position: 'Technical Director'
       links: [
         name: 'Twitter'
         url: 'https://twitter.com/aekym'
@@ -135,6 +139,8 @@ module.exports =
     # Saori
     #
     'Saori Kajiwara':
+      id: 'saori'
+      position: 'Designer'
       links: [
         name: 'Twitter'
         url: 'https://twitter.com/'
@@ -154,15 +160,17 @@ module.exports =
     # Me
     #
     'Mariusz Roliński':
+      id: 'mariusz'
+      position: 'Front end developer'
       links: [
         name: 'Twitter'
-        url: 'https://twitter.com/'
+        url: 'https://twitter.com/mariusz_io'
       ,
         name: 'Github'
-        url: 'https://github.com/'
+        url: 'https://github.com/mondoreale'
       ,
         name: 'Linked In'
-        url: 'https://www.linkedin.com/'
+        url: 'https://www.linkedin.com/in/mariuszrolinski'
       ]
       bio: """
         Mariusz jest po prostu świetny. #self-quote

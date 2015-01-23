@@ -442,7 +442,7 @@ We devised a more approachable brand, an Inkpad CMS and a fully responsive desig
           </div>
         </div>
         <hr>
-        <div class="row vp-4 vp-5-sm">
+        <div class="row vp-4-t vp-1-b vp-5-sm-t vp-2-sm-b">
           <div class="col-xs-12 col-sm-10">
             <ul class="projects huge">
               <li><a href="https://www.crowdcurity.com" target="_blank" data-slider="projects" data-slide-to="crowdcurity">Crowdcurity</a></li>
@@ -456,47 +456,153 @@ We devised a more approachable brand, an Inkpad CMS and a fully responsive desig
             </ul>
           </div>
         </div>
-        <div class="row section-header vm-2-b">
+        <div id="team" class="row section-header vm-2-b vp-3-t">
           <div class="col-xs-5">
             <h1 class="section-headline">Team</h1>
           </div>
-          <div class="col-xs-7"><a href="#" class="prev hidden-xs"><span class="icon icon-back"></span><span class="label">Mariusz</span></a><a href="#" class="next hidden-xs"><span class="label">Saori</span><span class="icon icon-forward"></span></a><a href="#" class="close"><span class="label hidden-xs">Close</span><span class="icon icon-close"></span></a></div>
+          <div class="col-xs-7"><a href="#" data-prev-for="team" onclick="return false;" class="prev hidden-xs"><span class="icon icon-back"></span><span class="label">Mariusz</span></a><a href="#" data-next-for="team" onclick="return false;" class="next hidden-xs"><span class="label">Saori</span><span class="icon icon-forward"></span></a><a href="#" class="close"><span class="label hidden-xs">Close</span><span class="icon icon-close"></span></a></div>
         </div>
         <hr>
-        <div class="row section-body vp-0 vp-5-sm">
-          <div class="col-sm-5 hidden-xs"><img alt="Lars" src="/assets/images/lars.jpg" width="155" height="155" class="photo">
-            <div class="vm-4-t">
-              <ul class="links">
-                <li><a href="#">Twitter</a></li>
-                <li class="separator"></li>
-                <li><a href="#">Github</a></li>
-                <li class="separator"></li>
-                <li><a href="#">Linkedin</a></li>
-              </ul>
+        <div class="vp-0 vp-5-sm">
+          <div data-slider="team" class="slider">
+            <div data-slide="matt" data-label="Matt" style="" class="person slider-item active">
+              <div class="row section-body">
+                <div class="col-sm-5 hidden-xs"><img alt="Matt Innes" src="/assets/images/lars.jpg" width="155" height="155" class="photo"/>
+                  <div class="vm-4-t">
+                    <ul class="links">
+                      <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://github.com/" target="_blank">Github</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank">Linked In</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                  <div class="team-member vp-2 vp-0-sm-t"><img alt="Lars" src="/assets/images/lars.jpg" width="50" height="50" class="photo visible-xs"/>
+                    <h1 class="section-headline">Matt Innes</h1>
+                    <p>Designer</p>
+                  </div>
+                  <hr/>
+                  <div class="vm-4-t vm-3-sm-t"><p>Etiam ultricies placerat pulvinar. In eu eleifend ligula. Ut in turpis diam. Etiam diam diam, faucibus nec augue sit amet, maximus lacinia purus. Integer imperdiet dolor et odio vulputate, eu faucibus metus auctor.</p>
+<p>Phasellus consectetur, ligula vitae tincidunt congue, enim orci varius augue, sed tempor nisl neque quis tellus.</p>
+</div>
+                </div>
+              </div>
+              <div class="vm-4-t visible-xs">
+                <ul class="links">
+                  <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://github.com/" target="_blank">Github</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank">Linked In</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-7">
-            <div class="team-member vp-2 vp-0-sm-t"><img alt="Lars" src="/assets/images/lars.jpg" width="50" height="50" class="photo visible-xs">
-              <h1 class="section-headline">Lars Kluge</h1>
-              <p>Technical Director</p>
+            <div data-slide="lars" data-label="Lars" style="display: none;" class="person slider-item">
+              <div class="row section-body">
+                <div class="col-sm-5 hidden-xs"><img alt="Lars Kluge" src="/assets/images/lars.jpg" width="155" height="155" class="photo"/>
+                  <div class="vm-4-t">
+                    <ul class="links">
+                      <li><a href="https://twitter.com/aekym" target="_blank">Twitter</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://github.com/larskluge" target="_blank">Github</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://www.linkedin.com/in/larskluge" target="_blank">Linked In</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                  <div class="team-member vp-2 vp-0-sm-t"><img alt="Lars" src="/assets/images/lars.jpg" width="50" height="50" class="photo visible-xs"/>
+                    <h1 class="section-headline">Lars Kluge</h1>
+                    <p>Technical Director</p>
+                  </div>
+                  <hr/>
+                  <div class="vm-4-t vm-3-sm-t"><p>Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.</p>
+<p>German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.</p>
+</div>
+                </div>
+              </div>
+              <div class="vm-4-t visible-xs">
+                <ul class="links">
+                  <li><a href="https://twitter.com/aekym" target="_blank">Twitter</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://github.com/larskluge" target="_blank">Github</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://www.linkedin.com/in/larskluge" target="_blank">Linked In</a></li>
+                </ul>
+              </div>
             </div>
-            <hr>
-            <div class="vm-4-t vm-3-sm-t">
-              <p>Berlin, Hamburg, New York. Previously CTO and Cofounder of Kitchensurfing, lead developer at DailyDeal.de (acquired by Google), CIO at Samedi.de, and many years experience as software engineer since 2000.</p>
-              <p>German Diploma in Computer Science from the University of Applied Sciences Wedel. Plays Capoeira, snowboarding, rock climbing, kite surfing, traveling, and never lets too many words loose.</p>
+            <div data-slide="saori" data-label="Saori" style="display: none;" class="person slider-item">
+              <div class="row section-body">
+                <div class="col-sm-5 hidden-xs"><img alt="Saori Kajiwara" src="/assets/images/lars.jpg" width="155" height="155" class="photo"/>
+                  <div class="vm-4-t">
+                    <ul class="links">
+                      <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://github.com/" target="_blank">Github</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://www.linkedin.com/" target="_blank">Linked In</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                  <div class="team-member vp-2 vp-0-sm-t"><img alt="Lars" src="/assets/images/lars.jpg" width="50" height="50" class="photo visible-xs"/>
+                    <h1 class="section-headline">Saori Kajiwara</h1>
+                    <p>Designer</p>
+                  </div>
+                  <hr/>
+                  <div class="vm-4-t vm-3-sm-t"><p>Etiam ultricies placerat pulvinar. In eu eleifend ligula. Ut in turpis diam. Etiam diam diam, faucibus nec augue sit amet, maximus lacinia purus. Integer imperdiet dolor et odio vulputate, eu faucibus metus auctor.</p>
+<p>Phasellus consectetur, ligula vitae tincidunt congue, enim orci varius augue, sed tempor nisl neque quis tellus.</p>
+</div>
+                </div>
+              </div>
+              <div class="vm-4-t visible-xs">
+                <ul class="links">
+                  <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://github.com/" target="_blank">Github</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank">Linked In</a></li>
+                </ul>
+              </div>
+            </div>
+            <div data-slide="mariusz" data-label="Mariusz" style="display: none;" class="person slider-item">
+              <div class="row section-body">
+                <div class="col-sm-5 hidden-xs"><img alt="Mariusz Roliński" src="/assets/images/lars.jpg" width="155" height="155" class="photo"/>
+                  <div class="vm-4-t">
+                    <ul class="links">
+                      <li><a href="https://twitter.com/mariusz_io" target="_blank">Twitter</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://github.com/mondoreale" target="_blank">Github</a></li>
+                      <li class="separator"></li>
+                      <li><a href="https://www.linkedin.com/in/mariuszrolinski" target="_blank">Linked In</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                  <div class="team-member vp-2 vp-0-sm-t"><img alt="Lars" src="/assets/images/lars.jpg" width="50" height="50" class="photo visible-xs"/>
+                    <h1 class="section-headline">Mariusz Roliński</h1>
+                    <p>Front end developer</p>
+                  </div>
+                  <hr/>
+                  <div class="vm-4-t vm-3-sm-t"><p>Mariusz jest po prostu świetny. #self-quote</p>
+</div>
+                </div>
+              </div>
+              <div class="vm-4-t visible-xs">
+                <ul class="links">
+                  <li><a href="https://twitter.com/mariusz_io" target="_blank">Twitter</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://github.com/mondoreale" target="_blank">Github</a></li>
+                  <li class="separator"></li>
+                  <li><a href="https://www.linkedin.com/in/mariuszrolinski" target="_blank">Linked In</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="vm-4-t visible-xs">
-          <ul class="links">
-            <li><a href="#">Twitter</a></li>
-            <li class="separator"></li>
-            <li><a href="#">Github</a></li>
-            <li class="separator"></li>
-            <li><a href="#">Linkedin</a></li>
-          </ul>
-        </div>
-        <div class="visible-xs prev-next-links"><a href="#" data-next-for="team" onclick="return false;" data-scroll class="prev"><span class="icon icon-back"></span><span class="label">Mariusz</span></a><a href="#" data-next-for="team" onclick="return false;" data-scroll class="next"><span class="label">Saori</span><span class="icon icon-forward"></span></a></div>
+        <div class="visible-xs prev-next-links"><a href="#" data-prev-for="team" onclick="return false;" data-scroll class="prev"><span class="icon icon-back"></span><span class="label">Mariusz</span></a><a href="#" data-next-for="team" onclick="return false;" data-scroll class="next"><span class="label">Saori</span><span class="icon icon-forward"></span></a></div>
         <div class="vm-6-b vm-4-sm-b">
           <hr>
         </div>
@@ -509,10 +615,10 @@ We devised a more approachable brand, an Inkpad CMS and a fully responsive desig
         <div class="row vp-4 vp-5-sm">
           <div class="col-xs-12 col-sm-10">
             <ul class="team huge">
-              <li><a href="#" target="_blank">Matt Innes</a></li>
-              <li><a href="#" target="_blank">Lars Kluge</a></li>
-              <li><a href="#" target="_blank">Saori Kajiwara</a></li>
-              <li><a href="#" target="_blank">Mariusz Roliński</a></li>
+              <li><a href="https://twitter.com/" target="_blank" data-slider="team" data-slide-to="matt">Matt Innes</a></li>
+              <li><a href="https://twitter.com/aekym" target="_blank" data-slider="team" data-slide-to="lars">Lars Kluge</a></li>
+              <li><a href="https://twitter.com/" target="_blank" data-slider="team" data-slide-to="saori">Saori Kajiwara</a></li>
+              <li><a href="https://twitter.com/mariusz_io" target="_blank" data-slider="team" data-slide-to="mariusz">Mariusz Roliński</a></li>
             </ul>
           </div>
         </div>

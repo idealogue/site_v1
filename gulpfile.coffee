@@ -43,6 +43,7 @@ gulp.task 'views', ['clean:views'], ->
   delete require.cache[__dirname + "/_views/data.coffee"];
   data = _.assign {}, require('./_views/data'),
     marked: marked
+    _: _
   gulp.src('_views/index.jade')
     .pipe jade(pretty: true, data: data).on('error', console.log)
     .pipe gulp.dest('.')

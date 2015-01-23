@@ -14,6 +14,11 @@ class Slider
     $(document.body)
       .on 'click', "[data-prev-for='#{@name}']", (e) => @goto(@prev(), $(e.currentTarget).is('[data-scroll]')) and false
       .on 'click', "[data-next-for='#{@name}']", (e) => @goto(@next(), $(e.currentTarget).is('[data-scroll]')) and false
+    @updateLabels()
+
+  updateLabels: ->
+    $("[data-prev-for='#{@name}'] .label").text @prevLabel() if @prevLabel()
+    $("[data-next-for='#{@name}'] .label").text @nextLabel() if @nextLabel()
 
   current: ->
     @$el.find('> .active').data 'slide'
@@ -28,10 +33,15 @@ class Slider
     [l, i] = [@slides.length, @index()]
     @slides[(l + i % l - 1) % l]
 
+  prevLabel: ->
+    @$el.find("[data-slide='#{@prev()}']").data('label') or null
+
+  nextLabel: ->
+    @$el.find("[data-slide='#{@next()}']").data('label') or null
+
   goto: (slideName, scroll = true) ->
     return if @_animating
     @_animating = true
-    console.log slideName
 
     $slide = @$el.find("[data-slide='#{slideName}']")
     $current = @$el.find('.active[data-slide]')
@@ -51,6 +61,7 @@ class Slider
         .stop()
         .animate { height: height }, 200, =>
           @$el.removeAttr 'style'
+          @updateLabels()
           $slide
             .stop()
             .animate { opacity: 1 }, 200, =>
