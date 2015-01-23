@@ -1180,6 +1180,12 @@ p + p {
 .text-right {
   text-align: right;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 strong {
   font-weight: 500;
 }
@@ -1678,7 +1684,6 @@ ul {
   }
 }
 .section-headline {
-  font-weight: 500;
   font-size: 1.33em;
   line-height: 1;
   margin: 0;
