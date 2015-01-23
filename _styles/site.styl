@@ -10,25 +10,24 @@
 
 xs-grid-column(80px)
 
-.team,
-.projects,
-.more
+
+// ^: Lists
+
+ul
   list-style: none
   margin: 0
   padding: 0
 
-.projects
-  +sm-screen()
++sm-screen()
+  .projects
     margin: 0 0 0 -0.25em
 
-.projects li
-  +sm-screen()
-    display: inline-block
-    margin-left: 0.25em
+    li
+      display: inline-block
+      margin-left: 0.25em
 
-.team,
-.more
-  margin: 0
+// $: Lists
+
 
 .section-headline
   medium()
@@ -93,9 +92,6 @@ xs-grid-column(80px)
   margin: 0 0.4em 0 0
 
 .links
-  list-style: none
-  margin: 0
-  padding: 0
 
   +xs-screen()
     border: solid $c-text
@@ -157,12 +153,6 @@ xs-grid-column(80px)
     padding-left: 0
     position: static
 
-.section-subheadline
-  medium()
-  font-size: inherit
-  line-height: 20px
-  margin: 0
-
 .openable .section-headline
 
   +xs-screen()
@@ -182,19 +172,12 @@ xs-grid-column(80px)
 .open .minus
   display: block
 
-.credits
-  list-style: none
-  margin: 0
-  padding: 0
-
 .credits .name
   margin-right: 5px
 
 .project-links
   border solid $c-text
   border-width: 1px 0
-  list-style: none
-  margin: 0
   padding: 25px 0
   text-align: center
 

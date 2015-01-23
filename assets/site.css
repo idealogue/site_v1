@@ -1663,9 +1663,7 @@ strong {
     margin-right: -40px;
   }
 }
-.team,
-.projects,
-.more {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1674,16 +1672,10 @@ strong {
   .projects {
     margin: 0 0 0 -0.25em;
   }
-}
-@media (min-width: 550px) {
   .projects li {
     display: inline-block;
     margin-left: 0.25em;
   }
-}
-.team,
-.more {
-  margin: 0;
 }
 .section-headline {
   font-weight: 500;
@@ -1760,11 +1752,6 @@ strong {
 .prev .icon {
   margin: 0 0.4em 0 0;
 }
-.links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 @media (max-width: 549px) {
   .links {
     border: solid #184d6a;
@@ -1831,12 +1818,6 @@ strong {
     position: static;
   }
 }
-.section-subheadline {
-  font-weight: 500;
-  font-size: inherit;
-  line-height: 20px;
-  margin: 0;
-}
 @media (max-width: 549px) {
   .openable .section-headline {
     font-size: inherit;
@@ -1860,19 +1841,12 @@ strong {
 .open .minus {
   display: block;
 }
-.credits {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 .credits .name {
   margin-right: 5px;
 }
 .project-links {
   border: solid #184d6a;
   border-width: 1px 0;
-  list-style: none;
-  margin: 0;
   padding: 25px 0;
   text-align: center;
 }
