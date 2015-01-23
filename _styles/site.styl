@@ -18,13 +18,14 @@ ul
   margin: 0
   padding: 0
 
-+sm-screen()
-  .projects
-    margin: 0 0 0 -0.25em
+.projects
+  margin-left: -0.25em
 
-    li
-      display: inline-block
-      margin-left: 0.25em
+.projects li
+  margin-left: 0.25em
+
+  +sm-screen()
+    display: inline-block
 
 // $: Lists
 

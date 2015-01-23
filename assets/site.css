@@ -1674,13 +1674,15 @@ ul {
   margin: 0;
   padding: 0;
 }
+.projects {
+  margin-left: -0.25em;
+}
+.projects li {
+  margin-left: 0.25em;
+}
 @media (min-width: 550px) {
-  .projects {
-    margin: 0 0 0 -0.25em;
-  }
   .projects li {
     display: inline-block;
-    margin-left: 0.25em;
   }
 }
 .section-headline {
