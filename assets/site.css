@@ -967,11 +967,6 @@ a:focus {
   color: #184d6a;
   text-decoration: underline;
 }
-a:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
 figure {
   margin: 0;
 }
@@ -981,6 +976,7 @@ img {
 hr {
   border: 0;
   border-top: 1px solid;
+  color: inherit;
   margin: 0;
 }
 p {
