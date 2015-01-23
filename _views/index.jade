@@ -17,7 +17,7 @@ block content
         a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
           span.label Next
           span.icon.icon-forward
-        a.close(href='#' data-slide-to='index-projects:index' onclick='return false;')
+        a.close.ttr(href='#' data-slide-to='index-projects:index' onclick='return false;')
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
@@ -35,11 +35,11 @@ block content
           .slider(data-slider='projects')
             for p, idx in projects
               +project(p, idx === 0)
-          .visible-xs.prev-next-links
+          .visible-xs.cf.vp-3
             a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
               span.icon.icon-back
               span.label Previous
-            a.next(href='#' data-next-for='projects' onclick='return false;' data-scroll)
+            a.next.ttr(href='#' data-next-for='projects' onclick='return false;' data-scroll)
               span.label Next
               span.icon.icon-forward
           .visible-xs: hr
@@ -55,7 +55,7 @@ block content
         a.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
           span.label Saori
           span.icon.icon-forward
-        a.close(href='#' data-slide-to='index-team:index' onclick='return false;')
+        a.close.ttr(href='#' data-slide-to='index-team:index' onclick='return false;')
           span.label.hidden-xs Close
           span.icon.icon-close
     hr
@@ -74,11 +74,11 @@ block content
             - var names = _.keys(team);
             for person, name in team
               +person(name, person, names.indexOf(name) === 0)
-        .visible-xs.prev-next-links
+        .visible-xs.cf.vp-3
           a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
             span.icon.icon-back
             span.label Mariusz
-          a.next(href='#' data-next-for='team' onclick='return false;' data-scroll)
+          a.next.ttr(href='#' data-next-for='team' onclick='return false;' data-scroll)
             span.label Saori
             span.icon.icon-forward
         .vm-6-b.vm-4-sm-b: hr

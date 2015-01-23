@@ -10,6 +10,16 @@
 
 xs-grid-column(80px)
 
+// ^: Custom classes
+
+.cf
+  clearfix()
+
+.ttr
+  float: right
+
+// $: Custom classes
+
 
 // ^: Lists
 
@@ -30,15 +40,26 @@ ul
 // $: Lists
 
 
+// ^: Icons
+
+.icon
+  font-size: 1.25em
+  line-height: inherit
+
+  +sm-screen()
+    font-size: 1.2em
+
+span + .icon,
+.icon + span
+  margin-left: 0.4em
+
+// $: Icons
+
+
 .section-headline
   font-size: 1.33em
   line-height: 1
   margin: 0
-
-.plus,
-.minus,
-.close
-  float: right
 
 .section-header
   line-height: 20px
@@ -53,43 +74,11 @@ ul
     margin-left: 25px
 
 .icon
-  font-size: 20px
-
   +sm-screen()
-    font-size: 1.2em
     margin: 0 0.3em 0 0
-
-.minus,
-.plus,
-.prev,
-.next,
-.close
-  line-height: 20px
-
-  span
-    vertical-align: top
-
-.prev-next-links
-  clearfix()
-  padding: 30px 0 28px
-
-  .prev
-    float: left
-
-  .next
-    float: right
 
 .slide--index .slider-nav
   visibility: hidden
-
-.plus .minus,
-.plus .icon,
-.close .icon,
-.next .icon
-  margin: 0 0 0 0.4em
-
-.prev .icon
-  margin: 0 0.4em 0 0
 
 .links
 
