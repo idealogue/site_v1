@@ -42,16 +42,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'shapes';
-    src: url('/assets/fonts/shapes.svg?41611113#shapes') format('svg');
-  }
-}
-*/
 
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "shapes";
@@ -68,12 +58,6 @@
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-forward:before { content: '\e800'; } /* '' */
@@ -1189,6 +1173,52 @@ h6,
 strong {
   font-weight: 500;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.ttr {
+  float: right;
+}
+@media (max-width: 549px) {
+  .container,
+  .col-xs-1,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .row {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
 .main-footer {
   border: solid #184d6a;
   border-width: 1px 0;
@@ -1647,44 +1677,6 @@ strong {
   display: block;
   opacity: 1;
 }
-@media (max-width: 549px) {
-  .container,
-  .col-xs-1,
-  .col-xs-2,
-  .col-xs-3,
-  .col-xs-4,
-  .col-xs-5,
-  .col-xs-6,
-  .col-xs-7,
-  .col-xs-8,
-  .col-xs-9,
-  .col-xs-10,
-  .col-xs-11,
-  .col-xs-12 {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .row {
-    margin-left: -40px;
-    margin-right: -40px;
-  }
-}
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-.cf:after {
-  clear: both;
-}
-.ttr {
-  float: right;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 .projects {
   margin-left: -0.25em;
 }
@@ -1699,6 +1691,8 @@ ul {
 .icon {
   font-size: 1.25em;
   line-height: inherit;
+  position: relative;
+  top: 1px;
 }
 @media (min-width: 550px) {
   .icon {
@@ -1708,11 +1702,6 @@ ul {
 span + .icon,
 .icon + span {
   margin-left: 0.4em;
-}
-.section-headline {
-  font-size: 1.33em;
-  line-height: 1;
-  margin: 0;
 }
 .section-header {
   line-height: 20px;
@@ -1726,120 +1715,44 @@ span + .icon,
 .section-header .next {
   margin-left: 25px;
 }
-@media (min-width: 550px) {
-  .icon {
-    margin: 0 0.3em 0 0;
-  }
-}
-.slide--index .slider-nav {
-  visibility: hidden;
-}
-@media (max-width: 549px) {
-  .links {
-    border: solid #184d6a;
-    border-width: 1px 0;
-    padding: 25px 0;
-    text-align: center;
-  }
-}
-@media (max-width: 549px) {
-  .links li {
-    display: inline-block;
-  }
-}
-.separator {
-  background: #184d6a;
-  border-radius: 50%;
-  display: inline-block;
-  height: 4px;
-  margin: 6px 10px 0;
-  vertical-align: top;
-  width: 4px;
-}
-@media (min-width: 550px) {
-  .separator {
-    display: none;
-  }
+.section-headline {
+  font-size: 1.33em;
+  line-height: inherit;
 }
 .section-body {
   line-height: 1.5em;
 }
-.section-body .links {
-  width: 155px;
-}
-.section-body .links li {
-  border: solid #184d6a;
-  border-width: 1px 0;
-  padding: 10px 0 7px;
-}
-.section-body .links li + li {
-  border-top: 0;
-}
-.photo {
-  border-radius: 8px;
-}
-.team-member {
-  padding-left: 65px;
-  position: relative;
-}
-.team-member .section-headline {
-  margin-bottom: 0.4em;
-}
-.team-member p {
-  line-height: 1;
-}
-.team-member .photo {
-  border-radius: 4px;
-  left: 0;
-  position: absolute;
-  top: 18px;
-}
-@media (min-width: 550px) {
-  .team-member {
-    padding-left: 0;
-    position: static;
-  }
-}
-@media (max-width: 549px) {
-  .openable .section-headline {
-    font-size: inherit;
-    line-height: 20px;
-    margin: 0;
-  }
-}
-.open .plus,
-.when-opened,
-.openable .minus {
-  display: none;
-}
-@media (min-width: 550px) {
-  .open .plus,
-  .when-opened,
-  .openable .minus {
-    display: block;
-  }
-}
-.open .when-opened,
-.open .minus {
-  display: block;
-}
-.credits .name {
-  margin-right: 5px;
-}
-.project-links {
+.links {
   border: solid #184d6a;
   border-width: 1px 0;
   padding: 25px 0;
   text-align: center;
 }
+.links li {
+  display: inline-block;
+}
+.links li + li {
+  padding-left: 30px;
+  position: relative;
+}
+.links li + li:before {
+  border: 2px solid #184d6a;
+  border-radius: 50%;
+  content: ' ';
+  display: block;
+  height: 0;
+  left: 13px;
+  position: absolute;
+  top: 6px;
+  width: 0;
+}
 @media (min-width: 550px) {
-  .project-links {
+  .project .links {
     text-align: left;
   }
 }
-.project-links li,
-.project-links li.separator {
-  display: inline-block;
+.credits .name {
+  margin-right: 0.6em;
 }
 .project-image {
   display: block;
@@ -1857,4 +1770,72 @@ span + .icon,
 .project-image-wrapper .project-image {
   left: -43px;
   position: relative;
+}
+@media (min-width: 550px) {
+  .person .links {
+    border: 0;
+    padding: 0;
+    width: 155px;
+    text-align: left;
+  }
+  .person .links li {
+    border: solid #184d6a;
+    border-width: 1px 0;
+    display: block;
+    padding: 10px 0 7px;
+  }
+  .person .links li + li {
+    border-top: 0;
+  }
+  .person .links li + li:before {
+    display: none;
+  }
+}
+.photo {
+  border-radius: 8px;
+}
+@media (max-width: 549px) {
+  .team-member {
+    padding-left: 65px;
+    position: relative;
+  }
+}
+.team-member .section-headline {
+  margin-bottom: 0.2em;
+}
+.team-member p {
+  line-height: 1;
+}
+.team-member .photo {
+  border-radius: 4px;
+  left: 0;
+  position: absolute;
+  top: 18px;
+}
+@media (min-width: 550px) {
+  .openable .section-headline {
+    font-weight: 400;
+  }
+}
+@media (max-width: 549px) {
+  .openable .section-headline {
+    font-size: inherit;
+  }
+}
+.open .when-closed,
+.when-opened {
+  display: none;
+}
+@media (min-width: 550px) {
+  .open .when-closed,
+  .when-opened {
+    display: block;
+  }
+}
+.open .when-opened,
+.when-closed {
+  display: block;
+}
+.slide--index .slider-nav {
+  visibility: hidden;
 }

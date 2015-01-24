@@ -21,8 +21,8 @@ mixin project(data, active)
             .col-xs-7.col-sm-12
               h1.section-headline= data.name
             .col-xs-5.visible-xs.togglers
-              a.plus.ttr(href='#'): span.icon.icon-plus
-              a.minus.ttr(href='#'): span.icon.icon-minus
+              a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
+              a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
           hr.when-opened
           .vm-2.when-opened
             != marked(data.description)
@@ -33,8 +33,8 @@ mixin project(data, active)
             .col-xs-7.col-sm-12
               h1.section-headline Credits
             .col-xs-5.visible-xs.togglers
-              a.plus.ttr(href='#'): span.icon.icon-plus
-              a.minus.ttr(href='#'): span.icon.icon-minus
+              a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
+              a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
           hr.when-opened
           .vm-2.vm-0-sm-b.vp-5-sm-b.when-opened
             ul.credits

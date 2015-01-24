@@ -8,25 +8,8 @@
 @import 'vertical_space'
 @import 'sliders'
 
-xs-grid-column(80px)
-
-// ^: Custom classes
-
-.cf
-  clearfix()
-
-.ttr
-  float: right
-
-// $: Custom classes
-
 
 // ^: Lists
-
-ul
-  list-style: none
-  margin: 0
-  padding: 0
 
 .projects
   margin-left: -0.25em
@@ -40,11 +23,13 @@ ul
 // $: Lists
 
 
-// ^: Icons
+// ^: Icons and labels
 
 .icon
   font-size: 1.25em
   line-height: inherit
+  position: relative
+  top: 1px
 
   +sm-screen()
     font-size: 1.2em
@@ -53,13 +38,10 @@ span + .icon,
 .icon + span
   margin-left: 0.4em
 
-// $: Icons
+// $: Icons and labels
 
 
-.section-headline
-  font-size: 1.33em
-  line-height: 1
-  margin: 0
+// ^: Sections
 
 .section-header
   line-height: 20px
@@ -73,111 +55,54 @@ span + .icon,
   .next
     margin-left: 25px
 
-.icon
-  +sm-screen()
-    margin: 0 0.3em 0 0
-
-.slide--index .slider-nav
-  visibility: hidden
-
-.links
-
-  +xs-screen()
-    border: solid $c-text
-    border-width: 1px 0
-    padding: 25px 0
-    text-align: center
-
-.links li
-
-  +xs-screen()
-    display: inline-block
-
-.separator
-  background: $c-text
-  border-radius: 50%
-  display: inline-block
-  height: 4px
-  margin: 6px 10px 0
-  vertical-align: top
-  width: 4px
-
-  +sm-screen()
-    display: none
+.section-headline
+  font-size: 1.33em
+  line-height: inherit
 
 .section-body
   line-height: 1.5em
 
-  .links
-    width: 155px
+// $: Sections
 
-  .links li
-    border solid $c-text
-    border-width: 1px 0
-    padding: 10px 0 7px
 
-  .links li + li
-    border-top: 0
+// ^: Links
 
-.photo
-  border-radius: 8px
-
-.team-member
-  padding-left: 65px
-  position: relative
-
-  .section-headline
-    margin-bottom: 0.4em
-
-  p
-    line-height: 1
-
-  .photo
-    border-radius: 4px
-    left: 0
-    position: absolute
-    top: 18px
-
-  +sm-screen()
-    padding-left: 0
-    position: static
-
-.openable .section-headline
-
-  +xs-screen()
-    font-size: inherit
-    line-height: 20px
-    margin: 0
-
-.open .plus,
-.when-opened,
-.openable .minus
-  display: none
-
-  +sm-screen()
-    display: block
-
-.open .when-opened,
-.open .minus
-  display: block
-
-.credits .name
-  margin-right: 5px
-
-.project-links
-  border solid $c-text
+.links
+  border: solid $c-text
   border-width: 1px 0
   padding: 25px 0
   text-align: center
 
-  +sm-screen()
+.links li
+  display: inline-block
+
+.links li + li
+  $padding = 13px
+  padding-left: $padding * 2 + 4px
+  position: relative
+
+  &:before
+    border: 2px solid $c-text
+    border-radius: 50%
+    content: ' '
+    display: block
+    height: 0
+    left: $padding
+    position: absolute
+    top: 6px
+    width: 0
+
+// $: Links
+
+
+// ^: Project
+
++sm-screen()
+  .project .links
     text-align: left
 
-.project-links li
-
-  &,
-  &.separator
-    display: inline-block
+.credits .name
+  margin-right: 0.6em
 
 .project-image
   display: block
@@ -191,4 +116,85 @@ span + .icon,
 .project-image-wrapper .project-image
   left: -43px
   position: relative
+
+// $: Project
+
+
+// ^: Person
+
++sm-screen()
+
+  .person .links
+    border: 0
+    padding: 0
+    width: 155px
+    text-align: left
+
+  .person .links li
+    border solid $c-text
+    border-width: 1px 0
+    display: block
+    padding: 10px 0 7px
+
+  .person .links li + li
+    border-top: 0
+
+    &:before
+      display: none
+
+.photo
+  border-radius: 8px
+
+.team-member
+
+  +xs-screen()
+    padding-left: 65px
+    position: relative
+
+  .section-headline
+    margin-bottom: 0.2em
+
+  p
+    line-height: 1
+
+  .photo
+    border-radius: 4px
+    left: 0
+    position: absolute
+    top: 18px
+
+
+// $: Person
+
+
+// ^: Openable blocks
+
+.openable .section-headline
+
+  +sm-screen()
+    book()
+
+  +xs-screen()
+    font-size: inherit
+
+.open .when-closed,
+.when-opened
+  display: none
+
+  +sm-screen()
+    display: block
+
+.open .when-opened,
+.when-closed
+  display: block
+
+// $: Openable blocks
+
+
+// ^: Nested sliders and their navs
+
+.slide--index .slider-nav
+  visibility: hidden
+
+// $: Nested sliders and their navs
 
