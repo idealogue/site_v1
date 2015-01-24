@@ -43,11 +43,9 @@ mixin project(data, active)
                   strong.name= name
                   span= tasks
 
-    .vm-0-sm-t
-      ul.project-links
-        li: a(href=data.url target='_blank') Visit the Site
-        li.separator
-        li: a(href='#' target='_blank')
-          .hidden-xs See more on Behance
-          .visible-xs-inline More on Behance
+    ul.links
+      - var links = [];
+      - links.push('<li><a href="' + data.url + '" target="_blank">Visit the Site</a></li>');
+      - links.push('<li><a href="#" target="_blank"><div class="hidden-xs">See more on Behance</div><div class="visible-xs-inline-block">More on Behance</div></a></li>');
+      != links.join('')
 
