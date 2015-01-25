@@ -9,6 +9,16 @@
 @import 'sliders'
 
 
+// ^: General
+
+.logo
+  +md-screen()
+    height: 108px
+    width: 357px
+
+// $: General
+
+
 // ^: Lists
 
 .projects
@@ -34,9 +44,20 @@
   +sm-screen()
     font-size: 1.2em
 
+  +md-screen()
+    font-size: 0.9em
+    top: 2px
+
+.label
+  +md-screen()
+    font-size: 0.665em
+
 span + .icon,
 .icon + span
-  margin-left: 0.4em
+  margin-left: 10px
+
+  +md-screen()
+    margin-left: 20px
 
 // $: Icons and labels
 
@@ -46,21 +67,42 @@ span + .icon,
 .section-header
   line-height: 20px
 
+  +md-screen()
+    line-height: 30px
+
   .prev,
   .next
     display: block
     float: left
     width: 85px
 
+    +md-screen()
+      width: 160px
+
   .next
     margin-left: 25px
+
+    +md-screen()
+      margin-left: 75px
 
 .section-headline
   font-size: 1.33em
   line-height: inherit
 
+  +md-screen()
+    font-size: 1em
+
 .section-body
   line-height: 1.5em
+
+  +md-screen()
+    font-size: 20px
+
+    p
+      width: 85%
+
+    .section-headline
+      font-size: 1.5em
 
 // $: Sections
 
@@ -92,6 +134,16 @@ span + .icon,
     top: 6px
     width: 0
 
++md-screen()
+  .links li + li
+    $padding = 26px
+    padding-left: $padding * 2 + 4px
+
+    &:before
+      border-width: 4px
+      left: $padding
+      top: 12px
+
 // $: Links
 
 
@@ -112,6 +164,9 @@ span + .icon,
 
   +xs-screen()
     img-responsive()
+
+.project-image-wrapper
+  margin-top: -35px
 
 .project-image-wrapper .project-image
   left: -43px
@@ -162,6 +217,16 @@ span + .icon,
     left: 0
     position: absolute
     top: 18px
+
++md-screen()
+
+  .person .links
+    width: 311px
+
+  .photo
+    border-radius: 16px
+    height: 311px
+    width: 311px
 
 
 // $: Person
