@@ -101,18 +101,18 @@ module.exports =
       position: 'Designer'
       links: [
         name: 'Twitter'
-        url: 'https://twitter.com/'
+        url: 'https://twitter.com/matt_innes'
       ,
-        name: 'Github'
-        url: 'https://github.com/'
+        name: 'Web'
+        url: 'http://mattinnes.com'
       ,
-        name: 'Linked In'
-        url: 'https://www.linkedin.com/'
+        name: 'Instagram'
+        url: 'http://instagram.com/matt_innes'
       ]
       bio: """
-        Etiam ultricies placerat pulvinar. In eu eleifend ligula. Ut in turpis diam. Etiam diam diam, faucibus nec augue sit amet, maximus lacinia purus. Integer imperdiet dolor et odio vulputate, eu faucibus metus auctor.
+        Matt has worked as a designer and creative director in Australia & Tokyo for more than 10 years. His work has been featured in a range of publications on & offline.
 
-        Phasellus consectetur, ligula vitae tincidunt congue, enim orci varius augue, sed tempor nisl neque quis tellus.
+        He holds a degree in Communication Design from Swinburne School of Design, Melbourne. He loves type, simple bikes & custom vintage motorbikes. He is a firm believer in the utility and future of digital currency.
       """
 
     # Lars
@@ -142,19 +142,16 @@ module.exports =
       id: 'saori'
       position: 'Designer'
       links: [
-        name: 'Twitter'
-        url: 'https://twitter.com/'
+        name: 'Pinterest'
+        url: 'http://www.pinterest.com/saorikaji2/'
       ,
-        name: 'Github'
-        url: 'https://github.com/'
-      ,
-        name: 'Linked In'
-        url: 'https://www.linkedin.com/'
+        name: 'Instagram'
+        url: 'http://instagram.com/saorikaji2'
       ]
       bio: """
-        Etiam ultricies placerat pulvinar. In eu eleifend ligula. Ut in turpis diam. Etiam diam diam, faucibus nec augue sit amet, maximus lacinia purus. Integer imperdiet dolor et odio vulputate, eu faucibus metus auctor.
+        A native of Shizuoka, Japan, Saori holds a degree in Communication Design from Swinburne Design School, Melbourne. She has worked as an illustrator & designer in Melbourne and Tokyo.
 
-        Phasellus consectetur, ligula vitae tincidunt congue, enim orci varius augue, sed tempor nisl neque quis tellus.
+        A digital project she worked on, Email-san, was acquired by Google Japan. She has been a regular contributor to Tokyo digital culture magazine Brain. Her Kamon Coaster series is available in good design stores in Australia.
       """
 
     # Me
@@ -163,11 +160,11 @@ module.exports =
       id: 'mariusz'
       position: 'Front end developer'
       links: [
-        name: 'Twitter'
-        url: 'https://twitter.com/mariusz_io'
-      ,
         name: 'Github'
         url: 'https://github.com/mondoreale'
+      ,
+        name: 'Web'
+        url: 'http://mondoreale.pl'
       ,
         name: 'Linked In'
         url: 'https://www.linkedin.com/in/mariuszrolinski'
