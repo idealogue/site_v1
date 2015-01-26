@@ -67,9 +67,6 @@ span + .icon,
 .section-header
   line-height: 20px
 
-  +md-screen()
-    line-height: 30px
-
   .prev,
   .next
     display: block
@@ -84,6 +81,18 @@ span + .icon,
 
     +md-screen()
       margin-left: 75px
+
+  +md-screen()
+    line-height: 30px
+
+    &.projects-header
+
+      .prev,
+      .next
+        width: 140px
+
+      .next
+        margin-left: 60px
 
 .section-headline
   font-size: 1.33em

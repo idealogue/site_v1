@@ -2073,11 +2073,6 @@ span + .icon,
 .section-header {
   line-height: 20px;
 }
-@media (min-width: 992px) {
-  .section-header {
-    line-height: 30px;
-  }
-}
 .section-header .prev,
 .section-header .next {
   display: block;
@@ -2096,6 +2091,18 @@ span + .icon,
 @media (min-width: 992px) {
   .section-header .next {
     margin-left: 75px;
+  }
+}
+@media (min-width: 992px) {
+  .section-header {
+    line-height: 30px;
+  }
+  .section-header.projects-header .prev,
+  .section-header.projects-header .next {
+    width: 140px;
+  }
+  .section-header.projects-header .next {
+    margin-left: 60px;
   }
 }
 .section-headline {
