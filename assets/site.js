@@ -185,14 +185,14 @@
     name = _ref2[_j];
     s = Slider.sliders[name];
     $(s).on('slide:changed', function(e, current) {
-      return window.location.hash = "#/" + current;
+      return window.location.hash = "#/" + e.currentTarget.name + "/" + current;
     });
   }
 
-  hsh = location.hash.match(/^#\/([a-z\-]+)$/);
+  hsh = location.hash.match(/^#\/(projects|team)\/([a-z\-]+)$/);
 
   if (hsh) {
-    slide = $(".slider .slider [data-slide='" + hsh[1] + "']").first();
+    slide = $(".slider .slider [data-slide='" + hsh[2] + "']").first();
     if (slide) {
       sliders = $.makeArray(slide.parents('[data-slider]').map(function() {
         return $(this).data('slider');

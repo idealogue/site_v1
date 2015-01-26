@@ -130,11 +130,11 @@ for name, slider of Slider.sliders
 for name in ['team', 'projects']
   s = Slider.sliders[name]
   $(s).on 'slide:changed', (e, current) ->
-    window.location.hash = "#/#{current}"
+    window.location.hash = "#/#{e.currentTarget.name}/#{current}"
 
-hsh = location.hash.match /^#\/([a-z\-]+)$/
+hsh = location.hash.match /^#\/(projects|team)\/([a-z\-]+)$/
 if hsh
-  slide = $(".slider .slider [data-slide='#{hsh[1]}']").first()
+  slide = $(".slider .slider [data-slide='#{hsh[2]}']").first()
   if slide
     sliders = $.makeArray slide.parents('[data-slider]').map -> $(@).data('slider')
     Slider.sliders[sliders[1]].gotoNested ["#{sliders[1]}:slides", "#{sliders[0]}:#{slide.data 'slide'}"], "##{sliders[0]}"
