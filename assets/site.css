@@ -2183,6 +2183,14 @@ span + .icon,
     height: auto;
   }
 }
+@media (min-width: 992px) {
+  .project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+}
 .project-image-wrapper {
   margin-top: -35px;
 }
