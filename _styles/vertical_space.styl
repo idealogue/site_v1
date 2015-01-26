@@ -1,28 +1,28 @@
 for size in xs sm md
   +screen(size)
-    for tenth in 0 1 2 3 4 5 6 7 8 9 10 12 13
-      selector = tenth
-      if size != xs
-        push(selector, size)
-        selector = join('-', selector)
+    for tenth in 0 1 2 3 4 5 6 7 8 9 10 12 13 15
+      $m-selector = (size != 'xs' ? size + '-' : '') + 'm' + tenth
+      $p-selector = (size != 'xs' ? size + '-' : '') + 'p' + tenth
 
-      .vm-{selector}
+      .{$m-selector}
         margin-bottom: tenth * 10px
         margin-top: tenth * 10px
 
-      .vm-{selector}-b
+      .{$m-selector}b
         margin-bottom: tenth * 10px
 
-      .vm-{selector}-t
+      .{$m-selector}t
         margin-top: tenth * 10px
 
-      .vp-{selector}
+      .{$p-selector}
         padding-bottom: tenth * 10px
         padding-top: tenth * 10px
 
-      .vp-{selector}-b
+      .{$p-selector}b
         padding-bottom: tenth * 10px
 
-      .vp-{selector}-t
+      .{$p-selector}t
         padding-top: tenth * 10px
+
+
 

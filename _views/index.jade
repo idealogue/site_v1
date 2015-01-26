@@ -4,10 +4,10 @@ include person
 
 block content
   .container
-    .vm-7-t.vm-4-b.vm-8-sm-t.vm-5-sm-b.vm-13-md-t.vm-10-md-b
+    div
       p.huge We design &amp; build digital products, from concept to code completion.
 
-    #projects.projects-header.row.section-header.vm-2-b.vp-3-t.slide--index
+    #projects.projects-header.row.section-header.slide--index
       .col-xs-5.col-md-6
         h1.section-headline Projects
       .col-xs-7.col-md-6.slider-nav
@@ -24,18 +24,18 @@ block content
 
     .slider(data-slider='index-projects')
       .slider-item.active(data-slide='index')
-        .row.vp-4-t.vp-1-b.vp-5-sm-t.vp-2-sm-b
+        .row
           .col-xs-12.col-sm-10
             ul.projects.huge
               for p in projects
                 +project-li(p)
 
       .slider-item(data-slide='slides')
-        .vp-0-t.vp-6-b.vp-5-sm-t.vp-4-sm-b
+        div
           .slider(data-slider='projects')
             for p, idx in projects
               +project(p, idx === 0)
-          .visible-xs.cf.vp-3
+          .visible-xs.cf
             a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
               span.icon.icon-back
               span.label Previous
@@ -45,7 +45,7 @@ block content
           .visible-xs: hr
 
 
-    #team.row.section-header.vm-2-b.vp-3-t.slide--index
+    #team.row.section-header
       .col-xs-5
         h1.section-headline Team
       .col-xs-7.slider-nav
@@ -62,32 +62,32 @@ block content
 
     .slider(data-slider='index-team')
       .slider-item.active(data-slide='index')
-        .row.vp-4.vp-5-sm
+        .row
           .col-xs-12.col-sm-10
             ul.team.huge
               for data, name in team
                 +person-li(name, data)
 
       .slider-item(data-slide='slides' style='display: none;')
-        .vp-0.vp-5-sm
+        div
           .slider(data-slider='team')
             - var names = _.keys(team);
             for person, name in team
               +person(name, person, names.indexOf(name) === 0)
-        .visible-xs.cf.vp-3
+        .visible-xs.cf
           a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
             span.icon.icon-back
             span.label Mariusz
           a.next.ttr(href='#' data-next-for='team' onclick='return false;' data-scroll)
             span.label Saori
             span.icon.icon-forward
-        .vm-6-b.vm-4-sm-b: hr
+        div: hr
 
-    .row.section-header.vm-2-b
+    .row.section-header
       .col-xs-12
         h1.section-headline More
     hr
-    .row.vp-4.vp-5-sm.vp-7-md
+    .row
       .col-xs-12.col-sm-10
         ul.more.huge
           li: a(href='mailto:io@idealogue.io') Contact Us
