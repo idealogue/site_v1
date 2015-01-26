@@ -9,11 +9,11 @@ mixin project(data, active)
     .row.section-body
       .col-sm-5.col-12-md.hidden-xs
         .project-image-wrapper.vp-2-b
-          img.project-image.visible-sm(alt='Crowdcurity' src='/assets/images/cc.png')
+          img.project-image.visible-sm(alt=data.name src='/assets/images/mobile-#{slide}.png')
 
       .col-xs-12.col-sm-7.col-md-12
         .vm-6-t.vm-2-b.visible-xs
-          img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
+          img.project-image(alt=data.name src='/assets/images/mobile-#{slide}.png')
 
         .row
           .col-xs-12.col-md-6
