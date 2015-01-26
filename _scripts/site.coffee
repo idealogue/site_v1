@@ -24,11 +24,7 @@ class @Slider
     $(document.body).on 'click', "[data-slide-to^='#{@name}']", (e) =>
         $target = $(e.currentTarget)
         sliderSlides = $target.data('slide-to').split(' ')
-        for ss in sliderSlides[1..]
-          [slider, slide] = ss.split(':')
-          Slider.sliders[slider].force slide
-        [slider, slide] = sliderSlides[0].split(':')
-        @goto(slide, $(e.currentTarget).data('scroll'))
+        @gotoNested sliderSlides, $(e.currentTarget).data('scroll')
         false
 
     $(@).on 'slide:changed', @updateLabels
@@ -68,6 +64,13 @@ class @Slider
       .removeAttr 'style'
       .addClass 'active'
     $(@).trigger 'slide:changed', [$slide.data 'slide']
+
+  gotoNested: (sliderSlides, scroll) ->
+    for ss in sliderSlides[1..]
+      [slider, slide] = ss.split(':')
+      Slider.sliders[slider].force slide
+    [slider, slide] = sliderSlides[0].split(':')
+    @goto(slide, scroll)
 
   goto: (slideName, scroll) ->
     return if @_animating
@@ -123,4 +126,16 @@ for name in ['index-team', 'index-projects']
 
 for name, slider of Slider.sliders
   $(slider).trigger 'slide:changed', [slider.current()]
+
+for name in ['team', 'projects']
+  s = Slider.sliders[name]
+  $(s).on 'slide:changed', (e, current) ->
+    window.location.hash = "#/#{current}"
+
+hsh = location.hash.match /^#\/([a-z\-]+)$/
+if hsh
+  slide = $(".slider .slider [data-slide='#{hsh[1]}']").first()
+  if slide
+    sliders = $.makeArray slide.parents('[data-slider]').map -> $(@).data('slider')
+    Slider.sliders[sliders[1]].gotoNested ["#{sliders[1]}:slides", "#{sliders[0]}:#{slide.data 'slide'}"], "##{sliders[0]}"
 
