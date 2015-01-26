@@ -1509,6 +1509,26 @@ ul {
 .p15t {
   padding-top: 150px;
 }
+.m20 {
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+.m20b {
+  margin-bottom: 200px;
+}
+.m20t {
+  margin-top: 200px;
+}
+.p20 {
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+.p20b {
+  padding-bottom: 200px;
+}
+.p20t {
+  padding-top: 200px;
+}
 @media (min-width: 550px) {
   .sm-m0 {
     margin-bottom: 0px;
@@ -1789,6 +1809,26 @@ ul {
   }
   .sm-p15t {
     padding-top: 150px;
+  }
+  .sm-m20 {
+    margin-bottom: 200px;
+    margin-top: 200px;
+  }
+  .sm-m20b {
+    margin-bottom: 200px;
+  }
+  .sm-m20t {
+    margin-top: 200px;
+  }
+  .sm-p20 {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+  .sm-p20b {
+    padding-bottom: 200px;
+  }
+  .sm-p20t {
+    padding-top: 200px;
   }
 }
 @media (min-width: 992px) {
@@ -2072,6 +2112,26 @@ ul {
   .md-p15t {
     padding-top: 150px;
   }
+  .md-m20 {
+    margin-bottom: 200px;
+    margin-top: 200px;
+  }
+  .md-m20b {
+    margin-bottom: 200px;
+  }
+  .md-m20t {
+    margin-top: 200px;
+  }
+  .md-p20 {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+  .md-p20b {
+    padding-bottom: 200px;
+  }
+  .md-p20t {
+    padding-top: 200px;
+  }
 }
 .slider-item {
   display: none;
@@ -2131,7 +2191,10 @@ span + .icon,
   }
 }
 .section-header {
+  border-bottom: 1px solid #184d6a;
   line-height: 20px;
+  margin: 2.5em 0;
+  padding: 1em 0;
 }
 .section-header .prev,
 .section-header .next {
@@ -2241,6 +2304,7 @@ span + .icon,
     display: block;
     max-width: 100%;
     height: auto;
+    margin-top: -20px;
   }
 }
 @media (min-width: 992px) {
@@ -2248,6 +2312,7 @@ span + .icon,
     display: block;
     max-width: 100%;
     height: auto;
+    margin-top: -40px;
     width: auto;
   }
 }
@@ -2269,7 +2334,7 @@ span + .icon,
     border: solid #184d6a;
     border-width: 1px 0;
     display: block;
-    padding: 10px 0 7px;
+    padding: 0.75em 0 0.7em;
   }
   .person .links li + li {
     border-top: 0;
@@ -2283,7 +2348,8 @@ span + .icon,
 }
 @media (max-width: 549px) {
   .team-member {
-    padding-left: 65px;
+    margin-top: -20px;
+    padding-left: 70px;
     position: relative;
   }
 }
@@ -2297,16 +2363,16 @@ span + .icon,
   border-radius: 4px;
   left: 0;
   position: absolute;
-  top: 18px;
+  top: -4px;
 }
 @media (min-width: 992px) {
   .person .links {
-    width: 311px;
+    width: 310px;
   }
   .photo {
     border-radius: 16px;
-    height: 311px;
-    width: 311px;
+    height: 310px;
+    width: 310px;
   }
 }
 @media (min-width: 550px) {

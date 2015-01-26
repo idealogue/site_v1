@@ -4,23 +4,23 @@ include person
 
 block content
   .container
-    div
+    .m6t.md-m10t
       p.huge We design &amp; build digital products, from concept to code completion.
 
-    #projects.projects-header.row.section-header.slide--index
-      .col-xs-5.col-md-6
-        h1.section-headline Projects
-      .col-xs-7.col-md-6.slider-nav
-        a.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
-          span.icon.icon-back
-          span.label Previous
-        a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
-          span.label Next
-          span.icon.icon-forward
-        a.close.ttr(href='#' data-slide-to='index-projects:index' onclick='return false;')
-          span.label.hidden-xs Close
-          span.icon.icon-close
-    hr
+    #projects.section-header.projects-header.slide--index
+      .row
+        .col-xs-5.col-md-6
+          h1.section-headline Projects
+        .col-xs-7.col-md-6.slider-nav
+          a.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
+            span.icon.icon-back
+            span.label Previous
+          a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
+            span.label Next
+            span.icon.icon-forward
+          a.close.ttr(href='#' data-slide-to='index-projects:index' onclick='return false;')
+            span.label.hidden-xs Close
+            span.icon.icon-close
 
     .slider(data-slider='index-projects')
       .slider-item.active(data-slide='index')
@@ -35,7 +35,7 @@ block content
           .slider(data-slider='projects')
             for p, idx in projects
               +project(p, idx === 0)
-          .visible-xs.cf
+          .visible-xs.cf.p3
             a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
               span.icon.icon-back
               span.label Previous
@@ -45,20 +45,20 @@ block content
           .visible-xs: hr
 
 
-    #team.row.section-header
-      .col-xs-5
-        h1.section-headline Team
-      .col-xs-7.slider-nav
-        a.prev.hidden-xs(href='#' data-prev-for='team' onclick='return false;')
-          span.icon.icon-back
-          span.label Mariusz
-        a.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
-          span.label Saori
-          span.icon.icon-forward
-        a.close.ttr(href='#' data-slide-to='index-team:index' onclick='return false;')
-          span.label.hidden-xs Close
-          span.icon.icon-close
-    hr
+    #team.section-header
+      .row
+        .col-xs-5
+          h1.section-headline Team
+        .col-xs-7.slider-nav
+          a.prev.hidden-xs(href='#' data-prev-for='team' onclick='return false;')
+            span.icon.icon-back
+            span.label Mariusz
+          a.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
+            span.label Saori
+            span.icon.icon-forward
+          a.close.ttr(href='#' data-slide-to='index-team:index' onclick='return false;')
+            span.label.hidden-xs Close
+            span.icon.icon-close
 
     .slider(data-slider='index-team')
       .slider-item.active(data-slide='index')
@@ -74,19 +74,20 @@ block content
             - var names = _.keys(team);
             for person, name in team
               +person(name, person, names.indexOf(name) === 0)
-        .visible-xs.cf
+        .visible-xs.cf.p3
           a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
             span.icon.icon-back
             span.label Mariusz
           a.next.ttr(href='#' data-next-for='team' onclick='return false;' data-scroll)
             span.label Saori
             span.icon.icon-forward
-        div: hr
+        hr.visible-xs
 
-    .row.section-header
-      .col-xs-12
-        h1.section-headline More
-    hr
+    .section-header
+      .row
+        .col-xs-12
+          h1.section-headline More
+
     .row
       .col-xs-12.col-sm-10
         ul.more.huge

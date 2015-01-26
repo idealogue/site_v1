@@ -17,30 +17,31 @@ mixin project(data, active)
         .visible-md.visible-lg
           img.project-image(alt=data.name src='/assets/images/cc-desktop.png')
 
-        .row
+        .row.m2t.sm-m0.md-m3t.md-m8b
           .col-xs-12.col-md-6
             .openable
               hr.visible-xs
-              .row
+              .row.p2.sm-p0
                 .col-xs-7.col-sm-12
                   h1.section-headline= data.name
                 .col-xs-5.visible-xs.togglers
                   a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
                   a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
-              hr.when-opened
-              .when-opened!= marked(data.description)
+              hr.sm-m1t.sm-m2b.md-m3t.md-m4b.when-opened
+              .when-opened.p2.sm-p0
+                != marked(data.description)
 
-          .col-xs-12.col-md-6
+          .col-xs-12.col-md-6.sm-m4t.md-m0t
             .openable
               hr.visible-xs
-              .row
+              .row.p2.sm-p0
                 .col-xs-7.col-sm-12
                   h1.section-headline Credits
                 .col-xs-5.visible-xs.togglers
                   a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
                   a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
-              hr.when-opened
-              .when-opened
+              hr.sm-m1t.sm-m2b.md-m3t.md-m4b.when-opened
+              .when-opened.p2.sm-p0
                 ul.credits
                   for tasks, name in data.credits
                     li

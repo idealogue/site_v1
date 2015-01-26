@@ -12,14 +12,14 @@ mixin person(name, data, active)
     .row.section-body
       .col-sm-5.hidden-xs
         img.photo(alt=name src='/assets/images/#{data.id}.jpg' width='155' height='155')
-        div: +social(data.links)
+        .sm-m4t.md-m5t: +social(data.links)
       .col-xs-12.col-sm-7
-        .team-member
+        .team-member.p2b.sm-p0b
           img.photo.visible-xs(alt='Lars' src='/assets/images/#{data.id}.jpg' width='50' height='50')
           h1.section-headline= name
           p= data.position
-        hr
-        div!= marked(data.bio)
+        hr.sm-m1t.sm-m2b.md-m3t.md-m4b
+        .p3.sm-p0!= marked(data.bio)
 
     .visible-xs: +social(data.links)
 
