@@ -11,11 +11,11 @@ mixin person(name, data, active)
   .person.slider-item(data-slide=data.id data-label=label class=(active ? 'active' : '') style=(!active ? 'display: none;' : ''))
     .row.section-body
       .col-sm-5.hidden-xs
-        img.photo(alt=name src='/assets/images/lars.jpg' width='155' height='155')
+        img.photo(alt=name src='/assets/images/#{data.id}.jpg' width='155' height='155')
         .vm-4-t: +social(data.links)
       .col-xs-12.col-sm-7
         .team-member.vp-2.vp-0-sm-t
-          img.photo.visible-xs(alt='Lars' src='/assets/images/lars.jpg' width='50' height='50')
+          img.photo.visible-xs(alt='Lars' src='/assets/images/#{data.id}.jpg' width='50' height='50')
           h1.section-headline= name
           p= data.position
         hr
