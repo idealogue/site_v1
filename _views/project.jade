@@ -1,6 +1,6 @@
 mixin project-li(data)
   - var slide = data.name.toLowerCase().replace(/[^a-z]/g, '-');
-  li: a(href=data.url target='_blank' data-slide-to="index-projects:slides projects:#{slide}" data-scroll='#projects')= data.name
+  li: a(href='/#/projects/#{slide}' target='_blank' data-slide-to="index-projects:slides projects:#{slide}" data-scroll='#projects')= data.name
 
 
 mixin project(data, active)
