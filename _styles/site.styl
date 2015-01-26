@@ -8,38 +8,61 @@
 @import 'vertical_space'
 @import 'sliders'
 
-xs-grid-column(80px)
 
-.team,
-.projects,
-.more
-  list-style: none
-  margin: 0
-  padding: 0
+// ^: General
+
+.logo
+  +md-screen()
+    height: 108px
+    width: 357px
+
+// $: General
+
+
+// ^: Lists
 
 .projects
-  +sm-screen()
-    margin: 0 0 0 -0.25em
+  margin-left: -0.25em
 
 .projects li
+  margin-left: 0.25em
+
   +sm-screen()
     display: inline-block
-    margin-left: 0.25em
 
-.team,
-.more
-  margin: 0
+// $: Lists
 
-.section-headline
-  medium()
-  font-size: 1.33em
-  line-height: 1
-  margin: 0
 
-.plus,
-.minus,
-.close
-  float: right
+// ^: Icons and labels
+
+.icon
+  font-size: 1.25em
+  line-height: inherit
+  position: relative
+  top: 1px
+
+  +sm-screen()
+    font-size: 1.2em
+
+  +md-screen()
+    font-size: 0.9em
+    top: 2px
+
+.label
+  +md-screen()
+    font-size: 0.665em
+
+span + .icon,
+.icon + span
+  margin-left: 10px
+
+  +md-screen()
+    margin-left: 20px
+
+// $: Icons and labels
+
+
+// ^: Sections
 
 .section-header
   line-height: 20px
@@ -50,99 +73,150 @@ xs-grid-column(80px)
     float: left
     width: 85px
 
+    +md-screen()
+      width: 160px
+
   .next
     margin-left: 25px
 
-.icon
-  font-size: 20px
+    +md-screen()
+      margin-left: 75px
 
-  +sm-screen()
-    font-size: 1.2em
-    margin: 0 0.3em 0 0
+  +md-screen()
+    line-height: 30px
 
-.minus,
-.plus,
-.prev,
-.next,
-.close
-  line-height: 20px
+    &.projects-header
 
-  span
-    vertical-align: top
+      .prev,
+      .next
+        width: 140px
 
-.prev-next-links
-  clearfix()
-  padding: 30px 0 28px
+      .next
+        margin-left: 60px
 
-  .prev
-    float: left
+.section-headline
+  font-size: 1.33em
+  line-height: inherit
 
-  .next
-    float: right
-
-.slide--index .slider-nav
-  visibility: hidden
-
-.plus .minus,
-.plus .icon,
-.close .icon,
-.next .icon
-  margin: 0 0 0 0.4em
-
-.prev .icon
-  margin: 0 0.4em 0 0
-
-.links
-  list-style: none
-  margin: 0
-  padding: 0
-
-  +xs-screen()
-    border: solid $c-text
-    border-width: 1px 0
-    padding: 25px 0
-    text-align: center
-
-.links li
-
-  +xs-screen()
-    display: inline-block
-
-.separator
-  background: $c-text
-  border-radius: 50%
-  display: inline-block
-  height: 4px
-  margin: 6px 10px 0
-  vertical-align: top
-  width: 4px
-
-  +sm-screen()
-    display: none
+  +md-screen()
+    font-size: 1em
 
 .section-body
   line-height: 1.5em
 
-  .links
-    width: 155px
+  +md-screen()
+    font-size: 20px
 
-  .links li
+    p
+      width: 85%
+
+    .section-headline
+      font-size: 1.5em
+
+// $: Sections
+
+
+// ^: Links
+
+.links
+  border: solid $c-text
+  border-width: 1px 0
+  padding: 25px 0
+  text-align: center
+
+.links li
+  display: inline-block
+
+.links li + li
+  $padding = 13px
+  padding-left: $padding * 2 + 4px
+  position: relative
+
+  &:before
+    border: 2px solid $c-text
+    border-radius: 50%
+    content: ' '
+    display: block
+    height: 0
+    left: $padding
+    position: absolute
+    top: 6px
+    width: 0
+
++md-screen()
+  .links li + li
+    $padding = 26px
+    padding-left: $padding * 2 + 4px
+
+    &:before
+      border-width: 4px
+      left: $padding
+      top: 12px
+
+// $: Links
+
+
+// ^: Project
+
++sm-screen()
+  .project .links
+    text-align: left
+
+.credits .name
+  margin-right: 0.6em
+
+.project-image
+  display: block
+  height: 425px
+  margin: 0 auto
+  width: 260px
+
+  +xs-screen()
+    img-responsive()
+
+.project-image-wrapper
+  margin-top: -35px
+
+.project-image-wrapper .project-image
+  left: -43px
+  position: relative
+
+// $: Project
+
+
+// ^: Person
+
++sm-screen()
+
+  .person .links
+    border: 0
+    padding: 0
+    width: 155px
+    text-align: left
+
+  .person .links li
     border solid $c-text
     border-width: 1px 0
+    display: block
     padding: 10px 0 7px
 
-  .links li + li
+  .person .links li + li
     border-top: 0
+
+    &:before
+      display: none
 
 .photo
   border-radius: 8px
 
 .team-member
-  padding-left: 65px
-  position: relative
+
+  +xs-screen()
+    padding-left: 65px
+    position: relative
 
   .section-headline
-    margin-bottom: 0.4em
+    margin-bottom: 0.2em
 
   p
     line-height: 1
@@ -153,70 +227,48 @@ xs-grid-column(80px)
     position: absolute
     top: 18px
 
-  +sm-screen()
-    padding-left: 0
-    position: static
++md-screen()
 
-.section-subheadline
-  medium()
-  font-size: inherit
-  line-height: 20px
-  margin: 0
+  .person .links
+    width: 311px
+
+  .photo
+    border-radius: 16px
+    height: 311px
+    width: 311px
+
+
+// $: Person
+
+
+// ^: Openable blocks
 
 .openable .section-headline
 
+  +sm-screen()
+    book()
+
   +xs-screen()
     font-size: inherit
-    line-height: 20px
-    margin: 0
 
-.open .plus,
-.when-opened,
-.openable .minus
+.open .when-closed,
+.when-opened
   display: none
 
   +sm-screen()
     display: block
 
 .open .when-opened,
-.open .minus
+.when-closed
   display: block
 
-.credits
-  list-style: none
-  margin: 0
-  padding: 0
+// $: Openable blocks
 
-.credits .name
-  margin-right: 5px
 
-.project-links
-  border solid $c-text
-  border-width: 1px 0
-  list-style: none
-  margin: 0
-  padding: 25px 0
-  text-align: center
+// ^: Nested sliders and their navs
 
-  +sm-screen()
-    text-align: left
+.slide--index .slider-nav
+  visibility: hidden
 
-.project-links li
-
-  &,
-  &.separator
-    display: inline-block
-
-.project-image
-  display: block
-  height: 389px
-  margin: 0 auto
-  width: 260px
-
-  +xs-screen()
-    img-responsive()
-
-.project-image-wrapper .project-image
-  left: -43px
-  position: relative
+// $: Nested sliders and their navs
 

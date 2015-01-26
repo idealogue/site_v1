@@ -16,11 +16,18 @@ sm-screen()
   @media (min-width: $screen-sm-min)
     {block}
 
+md-screen()
+  @media (min-width: $screen-md-min)
+    {block}
+
 screen(size)
   if size == xs
     {block}
-  else
+  if size == sm
     +sm-screen()
+      {block}
+  if size == md
+    +md-screen()
       {block}
 
 

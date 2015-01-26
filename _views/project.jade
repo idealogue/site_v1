@@ -7,46 +7,48 @@ mixin project(data, active)
   - var slide = data.name.toLowerCase().replace(/[^a-z]/g, '-');
   .project.slider-item(data-slide=slide class=(active ? 'active' : '') style=(!active ? 'display: none;' : ''))
     .row.section-body
-      .col-sm-5.hidden-xs
+      .col-sm-5.col-12-md.hidden-xs
         .project-image-wrapper.vp-2-b
-          img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
+          img.project-image.visible-sm(alt=data.name src='/assets/images/mobile-#{slide}.png')
 
-      .col-xs-12.col-sm-7
-        .vm-6-t.vm-2-b.visible-xs: img.project-image(alt='Crowdcurity' src='/assets/images/cc.png')
+      .col-xs-12.col-sm-7.col-md-12
+        .vm-2-t.vm-2-b.visible-xs
+          img.project-image(alt=data.name src='/assets/images/mobile-#{slide}.png')
 
-        .openable
-          hr.visible-xs
-          .row.vp-2.vp-0-sm-t.vp-1-sm-b
-            .col-xs-9.col-sm-12
-              h1.section-headline= data.name
-            .col-xs-3.visible-xs.togglers
-              a.plus(href='#'): span.icon.icon-plus
-              a.minus(href='#'): span.icon.icon-minus
-          hr.when-opened
-          .vm-2.when-opened
-            != marked(data.description)
+        .row
+          .col-xs-12.col-md-6
+            .openable
+              hr.visible-xs
+              .row.vp-2.vp-0-sm-t.vp-1-sm-b
+                .col-xs-7.col-sm-12
+                  h1.section-headline= data.name
+                .col-xs-5.visible-xs.togglers
+                  a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
+                  a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
+              hr.when-opened
+              .vm-2.when-opened
+                != marked(data.description)
 
-        .openable
-          hr.visible-xs
-          .row.vp-2.vp-0-sm-t.vp-1-sm-b
-            .col-xs-9.col-sm-12
-              h1.section-subheadline Credits
-            .col-xs-3.visible-xs.togglers
-              a.plus(href='#'): span.icon.icon-plus
-              a.minus(href='#'): span.icon.icon-minus
-          hr.when-opened
-          .vm-2.vm-0-sm-b.vp-5-sm-b.when-opened
-            ul.credits
-              for tasks, name in data.credits
-                li
-                  strong.name= name
-                  span= tasks
+          .col-xs-12.col-md-6
+            .openable
+              hr.visible-xs
+              .row.vp-2.vp-0-sm-t.vp-1-sm-b
+                .col-xs-7.col-sm-12
+                  h1.section-headline Credits
+                .col-xs-5.visible-xs.togglers
+                  a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
+                  a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
+              hr.when-opened
+              .vm-2.vm-0-sm-b.vp-5-sm-b.when-opened
+                ul.credits
+                  for tasks, name in data.credits
+                    li
+                      strong.name= name
+                      span= tasks
 
-    .vm-0-sm-t
-      ul.project-links
-        li: a(href=data.url target='_blank') Visit the Site
-        li.separator
-        li: a(href='#')
-          .hidden-xs See more on Behance
-          .visible-xs-inline More on Behance
+    ul.links
+      - var links = [];
+      - links.push('<li><a href="' + data.url + '" target="_blank">Visit the Site</a></li>');
+      - links.push('<li><a href="#" target="_blank"><div class="hidden-xs">See more on Behance</div><div class="visible-xs-inline-block">More on Behance</div></a></li>');
+      != links.join('')
 
