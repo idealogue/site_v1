@@ -98,7 +98,7 @@ module.exports =
     #
     'Matt Innes':
       id: 'matt'
-      position: 'Designer'
+      position: 'Creative Director'
       links: [
         name: 'Twitter'
         url: 'https://twitter.com/matt_innes'
@@ -110,9 +110,9 @@ module.exports =
         url: 'http://instagram.com/matt_innes'
       ]
       bio: """
-        Matt has worked as a designer and creative director in Australia & Tokyo for more than 10 years. His work has been featured in a range of publications on & offline.
+        Matt has worked as a designer and creative director in Australia and Japan for more than 10 years. His work has been featured in a range of publications on and offline.
 
-        He holds a degree in Communication Design from Swinburne School of Design, Melbourne. He loves type, simple bikes & custom vintage motorbikes. He is a firm believer in the utility and future of digital currency.
+        He holds a degree in Communication Design from Swinburne School of Design, Melbourne. He loves type, simple bikes & custom vintage motorbikes. He is a firm but not wild-eyed believer in the utility and future of digital currency.
       """
 
     # Lars
@@ -149,7 +149,7 @@ module.exports =
         url: 'http://instagram.com/saorikaji2'
       ]
       bio: """
-        A native of Shizuoka, Japan, Saori holds a degree in Communication Design from Swinburne Design School, Melbourne. She has worked as an illustrator & designer in Melbourne and Tokyo.
+        A native of Shizuoka, Japan, Saori holds a degree in Communication Design from Swinburne Design School, Melbourne. She has worked as an illustrator and designer in Melbourne and Tokyo.
 
         A digital project she worked on, Email-san, was acquired by Google Japan. She has been a regular contributor to Tokyo digital culture magazine Brain. Her Kamon Coaster series is available in good design stores in Australia.
       """
@@ -158,7 +158,7 @@ module.exports =
     #
     'Mariusz Roliński':
       id: 'mariusz'
-      position: 'Front end developer'
+      position: 'Front End Developer'
       links: [
         name: 'Github'
         url: 'https://github.com/mondoreale'
