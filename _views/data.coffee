@@ -170,6 +170,8 @@ module.exports =
         url: 'https://www.linkedin.com/in/mariuszrolinski'
       ]
       bio: """
-        Mariusz jest po prostu świetny. #self-quote
+        Mariusz is a versatile web developer with almost ten years of experience. He has helped to build various beautiful apps for companies in Europe and the US.
+
+        He studied Teleinformatics at Wroclaw University of Technology. He aims for nothing less than pixel perfection, loves mountains and a good read about post-apocalyptic worlds.
       """
 
