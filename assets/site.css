@@ -1205,6 +1205,9 @@ ul {
 .link-placeholder {
   color: rgba(24,77,106,0.5);
 }
+.nw {
+  white-space: nowrap;
+}
 @media (max-width: 549px) {
   .container,
   .col-xs-1,

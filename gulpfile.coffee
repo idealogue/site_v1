@@ -8,6 +8,7 @@ concat = require 'gulp-concat'
 coffee = require 'gulp-coffee'
 marked = require 'marked'
 _ = require 'lodash'
+helpers = require './_lib/helpers'
 
 paths =
   js: [
@@ -41,7 +42,7 @@ gulp.task 'css', ['clean:css'], ->
 
 gulp.task 'views', ['clean:views'], ->
   delete require.cache[__dirname + "/_views/data.coffee"];
-  data = _.assign {}, require('./_views/data'),
+  data = _.assign {}, require('./_views/data'), helpers,
     marked: marked
     _: _
   gulp.src('_views/index.jade')

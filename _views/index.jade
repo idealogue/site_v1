@@ -5,7 +5,7 @@ include person
 block content
   .container
     .m6t.lg-m10t
-      p.huge We design &amp; build digital products, from concept to code completion.
+      p.huge!= 'We design ' +amp()+ ' build digital products, ' + nw('from concept') + ' to ' + nw('code completion') + '.'
 
     #projects.section-header.projects-header.slide--index
       .row

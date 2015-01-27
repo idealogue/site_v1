@@ -1,3 +1,7 @@
+helpers = require '../_lib/helpers'
+nw = helpers.nw
+amp = helpers.amp
+
 module.exports =
   baseUrl: 'http://idealogue.github.io'
 
@@ -18,7 +22,7 @@ module.exports =
     name: 'Counterparty'
     url: 'http://counterparty.io'
     description: """
-      New brand and responsive site for leading cryptocurrency 2.0 group Counterparty. The main challenge was conveying the complexity of their technology as simply as possible.
+      New brand and responsive site for leading cryptocurrency 2.0 group Counterparty. The main challenge was conveying the complexity of their technology as simply #{nw 'as possible'}.
     """
     credits:
       'Matt Innes': 'Brand, Creative direction'
@@ -30,7 +34,7 @@ module.exports =
     name: 'Inkpad'
     url: 'https://www.inkpad.io'
     description: """
-      Our own product, Inkpad is a multi-function text tool for the internet. Write, share and publish online simply and beautifully.
+      Our own product, Inkpad is a multi-function text tool for the internet. Write, share and publish online simply #{nw 'and beautifully'}.
     """
     credits:
       'Lars Kluge': 'Concept, code'
@@ -40,7 +44,7 @@ module.exports =
     name: 'Huxtaburger'
     url: 'http://www.huxtaburger.com.au'
     description: """
-      The key UI concept for Melbourne cult burger joint's site was: being able to flip through the site with one hand while holding a beer in the other. Also, exploding burgers.
+      The key UI concept for Melbourne cult burger joint's site was: being able to flip through the site with one hand while holding a beer in the other. Also, #{nw 'exploding burgers'}.
     """
     credits:
       'Matt Innes': 'Brand, Direction, Design'
@@ -51,7 +55,7 @@ module.exports =
     name: 'Hive'
     url: 'https://hivewallet.com'
     description: """
-      New brand and UI for multi-crypto wallet Hive, rolled out as a web wallet as well as iOS app. The aim was to make a simple, non-technical bitcoin wallet anyone could use.
+      New brand and UI for multi-crypto wallet Hive, rolled out as a web wallet as well as iOS app. The aim was to make a simple, non-technical bitcoin wallet anyone #{nw 'could use'}.
     """
     credits:
       'Wendell Davis': 'Creator & Concept'
@@ -112,7 +116,7 @@ module.exports =
         url: 'http://instagram.com/matt_innes'
       ]
       bio: """
-        Matt has worked as a designer and creative director in Australia and Japan for more than 10 years. His work has been featured in a range of publications on and offline.
+        Matt has worked as a designer and creative director in Australia and Japan for more than 10 years. His work has been featured in a range of publications on #{nw 'and offline'}.
 
         He holds a degree in Communication Design from Swinburne School of Design, Melbourne. He loves type, simple bikes & custom vintage motorbikes. He is a firm but not wild-eyed believer in the utility and future of digital currency.
       """
@@ -174,6 +178,6 @@ module.exports =
       bio: """
         Mariusz is a versatile web developer with almost ten years of experience. He has helped to build various beautiful apps for companies in Europe and the US.
 
-        He studied Teleinformatics at Wroclaw University of Technology. He aims for nothing less than pixel perfection, loves mountains and a good read about post-apocalyptic worlds.
+        He studied Teleinformatics at Wroclaw University of Technology. He aims for nothing less than pixel perfection, loves mountains, video games, and a good read about post-apocalyptic worlds.
       """
 
