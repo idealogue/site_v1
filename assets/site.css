@@ -2161,7 +2161,14 @@ ul {
     display: inline-block;
   }
 }
+.icon-link {
+  text-decoration: none !important;
+}
+.icon-link:hover .icon {
+  color: #5c9abc;
+}
 .icon {
+  transition: 100ms linear color;
   font-size: 1.25em;
   line-height: inherit;
   position: relative;

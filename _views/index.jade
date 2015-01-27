@@ -12,13 +12,13 @@ block content
         .col-xs-5.col-lg-6
           h1.section-headline Projects
         .col-xs-7.col-lg-6.slider-nav
-          a.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
+          a.icon-link.prev.hidden-xs(href='#' data-prev-for='projects' onclick='return false;')
             span.icon.icon-back
             span.label Previous
-          a.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
+          a.icon-link.next.hidden-xs(href='#' data-next-for='projects' onclick='return false;')
             span.label Next
             span.icon.icon-forward
-          a.close.ttr(href='#' data-slide-to='index-projects:index' onclick='return false;')
+          a.icon-link.close.ttr(href='#' data-slide-to='index-projects:index' onclick='return false;')
             span.label.hidden-xs Close
             span.icon.icon-close
 
@@ -36,10 +36,10 @@ block content
             for p, idx in projects
               +project(p, idx === 0)
           .visible-xs.cf.p3
-            a.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
+            a.icon-link.prev(href='#' data-prev-for='projects' onclick='return false;' data-scroll)
               span.icon.icon-back
               span.label Previous
-            a.next.ttr(href='#' data-next-for='projects' onclick='return false;' data-scroll)
+            a.icon-link.next.ttr(href='#' data-next-for='projects' onclick='return false;' data-scroll)
               span.label Next
               span.icon.icon-forward
           .visible-xs: hr
@@ -50,13 +50,13 @@ block content
         .col-xs-5
           h1.section-headline Team
         .col-xs-7.slider-nav
-          a.prev.hidden-xs(href='#' data-prev-for='team' onclick='return false;')
+          a.icon-link.prev.hidden-xs(href='#' data-prev-for='team' onclick='return false;')
             span.icon.icon-back
             span.label Mariusz
-          a.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
+          a.icon-link.next.hidden-xs(href='#' data-next-for='team' onclick='return false;')
             span.label Saori
             span.icon.icon-forward
-          a.close.ttr(href='#' data-slide-to='index-team:index' onclick='return false;')
+          a.icon-link.close.ttr(href='#' data-slide-to='index-team:index' onclick='return false;')
             span.label.hidden-xs Close
             span.icon.icon-close
 
@@ -75,10 +75,10 @@ block content
             for person, name in team
               +person(name, person, names.indexOf(name) === 0)
         .visible-xs.cf.p3
-          a.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
+          a.icon-link.prev(href='#' data-prev-for='team' onclick='return false;' data-scroll)
             span.icon.icon-back
             span.label Mariusz
-          a.next.ttr(href='#' data-next-for='team' onclick='return false;' data-scroll)
+          a.icon-link.next.ttr(href='#' data-next-for='team' onclick='return false;' data-scroll)
             span.label Saori
             span.icon.icon-forward
         hr.visible-xs
