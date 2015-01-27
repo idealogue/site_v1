@@ -4,7 +4,7 @@ mixin social(links)
     != lis.join('')
 
 mixin person-li(name, data)
-  li: a(href='/#/team/#{data.id}' target='_blank' data-slide-to="index-team:slides team:#{data.id}" data-scroll='#team')= name
+  li: a(href='/#/team/#{data.id}' data-slide-to="index-team:slides team:#{data.id}" data-scroll='#team')= name
 
 mixin person(name, data, active)
   - var label = name.split(' ')[0];

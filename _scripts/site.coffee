@@ -22,10 +22,10 @@ class @Slider
       @goto(@next(), $(e.currentTarget).data('scroll')) and false
 
     $(document.body).on 'click', "[data-slide-to^='#{@name}']", (e) =>
-        $target = $(e.currentTarget)
-        sliderSlides = $target.data('slide-to').split(' ')
-        @gotoNested sliderSlides, $(e.currentTarget).data('scroll')
-        false
+      $target = $(e.currentTarget)
+      sliderSlides = $target.data('slide-to').split(' ')
+      @gotoNested sliderSlides, $(e.currentTarget).data('scroll')
+      false
 
     $(@).on 'slide:changed', @updateLabels
     $(@).trigger 'slide:changed', [@current()]
