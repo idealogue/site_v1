@@ -130,7 +130,7 @@ for name, slider of Slider.sliders
 for name in ['team', 'projects']
   s = Slider.sliders[name]
   $(s).on 'slide:changed', (e, current) ->
-    window.location.hash = "#/#{e.currentTarget.name}/#{current}"
+    document.location.hash = "#/#{e.currentTarget.name}/#{current}"
 
 hsh = location.hash.match /^#\/(projects|team)\/([a-z\-]+)$/
 if hsh

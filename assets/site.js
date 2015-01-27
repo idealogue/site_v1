@@ -185,7 +185,7 @@
     name = _ref2[_j];
     s = Slider.sliders[name];
     $(s).on('slide:changed', function(e, current) {
-      return window.location.hash = "#/" + e.currentTarget.name + "/" + current;
+      return document.location.hash = "#/" + e.currentTarget.name + "/" + current;
     });
   }
 
