@@ -16,8 +16,8 @@ sm-screen()
   @media (min-width: $screen-sm-min)
     {block}
 
-md-screen()
-  @media (min-width: $screen-md-min)
+lg-screen()
+  @media (min-width: $screen-lg-min)
     {block}
 
 screen(size)
@@ -26,8 +26,8 @@ screen(size)
   if size == sm
     +sm-screen()
       {block}
-  if size == md
-    +md-screen()
+  if size == lg
+    +lg-screen()
       {block}
 
 

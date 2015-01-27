@@ -7,18 +7,18 @@ mixin project(data, active)
   - var slide = data.name.toLowerCase().replace(/[^a-z]/g, '-');
   .project.slider-item(data-slide=slide class=(active ? 'active' : '') style=(!active ? 'display: none;' : ''))
     .row.section-body
-      .col-sm-5.col-12-md.hidden-xs
+      .col-sm-5.col-lg-12.hidden-xs.hidden-lg
         .project-image-wrapper
-          img.project-image.visible-sm(alt=data.name src='/assets/images/mobile-#{slide}.png')
+          img.project-image(alt=data.name src='/assets/images/mobile-#{slide}.png')
 
-      .col-xs-12.col-sm-7.col-md-12
+      .col-xs-12.col-sm-7.col-lg-12
         .visible-xs
           img.project-image(alt=data.name src='/assets/images/mobile-#{slide}.png')
-        .visible-md.visible-lg
+        .visible-lg
           img.project-image(alt=data.name src='/assets/images/cc-desktop.png')
 
-        .row.m2t.sm-m0.md-m3t.md-m8b
-          .col-xs-12.col-md-6
+        .row.m2t.sm-m0.lg-m3t.lg-m8b
+          .col-xs-12.col-lg-6
             .openable
               hr.visible-xs
               .row.p2.sm-p0
@@ -27,11 +27,11 @@ mixin project(data, active)
                 .col-xs-5.visible-xs.togglers
                   a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
                   a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
-              hr.sm-m1t.sm-m2b.md-m3t.md-m4b.when-opened
+              hr.sm-m1t.sm-m2b.lg-m3t.lg-m4b.when-opened
               .when-opened.p2.sm-p0
                 != marked(data.description)
 
-          .col-xs-12.col-md-6.sm-m4t.md-m0t
+          .col-xs-12.col-lg-6.sm-m4t.lg-m0t
             .openable
               hr.visible-xs
               .row.p2.sm-p0
@@ -40,7 +40,7 @@ mixin project(data, active)
                 .col-xs-5.visible-xs.togglers
                   a.plus.ttr.when-closed(href='#'): span.icon.icon-plus
                   a.minus.ttr.when-opened(href='#'): span.icon.icon-minus
-              hr.sm-m1t.sm-m2b.md-m3t.md-m4b.when-opened
+              hr.sm-m1t.sm-m2b.lg-m3t.lg-m4b.when-opened
               .when-opened.p2.sm-p0
                 ul.credits
                   for tasks, name in data.credits
