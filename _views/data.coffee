@@ -84,7 +84,7 @@ module.exports =
     name: 'Xbalances'
     url: 'http://www.xbalances.com'
     description: """
-      Entrainait pressaient he paraissent sa commandant qu du.
+      Our own product, Xbalances is a cross blockchain balance lookup service – a search engine for digital currencies. Enter a Bitcoin address and see the balance of BTC, XCP, and many other digital assets.
     """
     credits:
       'Lars Kluge': 'Concept, code'
