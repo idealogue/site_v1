@@ -1,4 +1,6 @@
 module.exports =
+  baseUrl: 'http://idealogue.github.io'
+
   projects: [
     name: 'Crowdcurity'
     url: 'https://www.crowdcurity.com'
