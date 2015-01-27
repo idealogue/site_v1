@@ -127,7 +127,7 @@ module.exports =
         name: 'Github'
         url: 'https://github.com/larskluge'
       ,
-        name: 'Linked In'
+        name: 'LinkedIn'
         url: 'https://www.linkedin.com/in/larskluge'
       ]
       bio: """
@@ -166,7 +166,7 @@ module.exports =
         name: 'Web'
         url: 'http://mondoreale.pl'
       ,
-        name: 'Linked In'
+        name: 'LinkedIn'
         url: 'https://www.linkedin.com/in/mariuszrolinski'
       ]
       bio: """
