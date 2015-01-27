@@ -51,6 +51,6 @@ mixin project(data, active)
     ul.links
       - var links = [];
       - links.push('<li><a href="' + data.url + '" target="_blank">Visit the Site</a></li>');
-      - links.push('<li><a href="#" target="_blank"><div class="hidden-xs">See more on Behance</div><div class="visible-xs-inline-block">More on Behance</div></a></li>');
+      - links.push('<li><span class="link-placeholder"><div class="hidden-xs">See more on Behance</div><div class="visible-xs-inline-block">More on Behance</div></span></li>');
       != links.join('')
 

@@ -1202,6 +1202,9 @@ ul {
 .ttr {
   float: right;
 }
+.link-placeholder {
+  color: rgba(24,77,106,0.5);
+}
 @media (max-width: 549px) {
   .container,
   .col-xs-1,
