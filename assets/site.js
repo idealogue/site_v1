@@ -201,4 +201,6 @@
     }
   }
 
+  $('.slider-nav').removeAttr('style');
+
 }).call(this);

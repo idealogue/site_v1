@@ -139,3 +139,5 @@ if hsh
     sliders = $.makeArray slide.parents('[data-slider]').map -> $(@).data('slider')
     Slider.sliders[sliders[1]].gotoNested ["#{sliders[1]}:slides", "#{sliders[0]}:#{slide.data 'slide'}"], "##{sliders[0]}"
 
+$('.slider-nav').removeAttr 'style'
+
