@@ -3,7 +3,7 @@ nw = helpers.nw
 amp = helpers.amp
 
 module.exports =
-  baseUrl: 'http://idealogue.github.io'
+  baseUrl: 'http://www.idealogue.io'
 
   projects: [
     name: 'Crowdcurity'
