@@ -170,7 +170,7 @@ module.exports =
         url: 'https://github.com/mondoreale'
       ,
         name: 'Web'
-        url: 'http://mondoreale.pl'
+        url: 'http://www.mariusz.io'
       ,
         name: 'LinkedIn'
         url: 'https://www.linkedin.com/in/mariuszrolinski'
