@@ -43,6 +43,7 @@ module.exports =
   ,
     name: 'Huxtaburger'
     url: 'http://www.huxtaburger.com.au'
+    behance: 'https://www.behance.net/gallery/26620957/Huxtaburger'
     description: """
       The key UI concept for Melbourne cult burger joint's site was: being able to flip through the site with one hand while holding a beer in the other. Also, #{nw 'exploding burgers'}.
     """
