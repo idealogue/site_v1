@@ -8,6 +8,7 @@ module.exports =
   projects: [
     name: 'Crowdcurity'
     url: 'https://www.crowdcurity.com'
+    behance: 'https://www.behance.net/gallery/26856799/Crowdcurity'
     description: """
       Brand refresh and site for Crowdcurity, the crowd sourced site security specialists.
       We devised a more approachable brand, an Inkpad CMS and a fully responsive design.
@@ -67,6 +68,7 @@ module.exports =
   ,
     name: 'Bitcoins.com'
     url: 'http://bitcoins.idealogue.io'
+    behance: 'https://www.behance.net/gallery/26761065/Bitcoinscom'
     description: """
       Designed as a simple introduction to Bitcoin, for the destination URL Bitcoins.com owned by a large but now-defunct bitcoin exchange.
     """
