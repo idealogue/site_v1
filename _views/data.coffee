@@ -6,11 +6,11 @@ module.exports =
   baseUrl: 'http://www.idealogue.io'
 
   projects: [
-    name: 'Crowdcurity'
-    url: 'https://www.crowdcurity.com'
+    name: 'Cobalt'
+    url: 'https://cobalt.io/'
     behance: 'https://www.behance.net/gallery/26856799/Crowdcurity'
     description: """
-      Brand refresh and site for Crowdcurity, the crowd sourced site security specialists.
+      Brand refresh and site for Cobalt, the crowd sourced site security specialists.
       We devised a more approachable brand, an Inkpad CMS and a fully responsive design.
     """
     credits:
